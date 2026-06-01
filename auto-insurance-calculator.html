@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Auto Insurance Calculator — Estimate Your Car Insurance Cost 2026 | FreeInsuranceIQ</title>
+  <meta name="description" content="Estimate your monthly car insurance cost in 2026. Free calculator based on age, driving record, vehicle value, coverage level, and state. No email required." />
+  <link rel="canonical" href="https://freeinsuranceiq.com/auto-insurance-calculator.html" />
+  <!-- GA4: TBD -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org", "@type": "WebApplication",
+    "name": "Auto Insurance Calculator", "url": "https://freeinsuranceiq.com/auto-insurance-calculator.html",
+    "description": "Estimate monthly car insurance costs based on driver age, record, vehicle value, and coverage level.",
+    "applicationCategory": "FinanceApplication", "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --primary: #0f9e6e; --primary-dark: #0b7a55; --accent: #f59e0b; --bg: #f3f9f7; --card: #ffffff; --text: #1a2e25; --muted: #6b7280; --border: #d1e8df; --radius: 12px; --shadow: 0 2px 16px rgba(15,158,110,0.08); }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .page-hero { background: linear-gradient(135deg, #0f9e6e 0%, #0b7a55 100%); color: white; text-align: center; padding: 44px 24px 36px; }
+    .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; }
+    .page-hero p { font-size: 1rem; opacity: 0.9; max-width: 520px; margin: 0 auto; }
+    .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
+    .calc-panel { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
+    .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
+    .calc-panel .subtitle { color: var(--muted); font-size: 0.88rem; margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; }
+    .form-group input, .form-group select { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); background: var(--bg); transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary); background: white; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+    .calc-btn:hover { background: var(--primary-dark); }
+    .result-box { background: linear-gradient(135deg, #f0fdf8, #fef9ec); border: 1px solid #a7f3d0; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box.show { display: block; }
+    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+    .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
+    .result-item .value { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+    .quick-answer { background: #f0fdf8; border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 6px; font-size: 0.95rem; margin-bottom: 22px; line-height: 1.6; color: var(--text); }
+    .content-section { margin-bottom: 32px; }
+    .content-section h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
+    .content-section p { font-size: 0.93rem; line-height: 1.7; color: #374151; margin-bottom: 14px; }
+    .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { width: 100%; background: var(--card); border: none; padding: 16px 20px; font-size: 0.95rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--text); }
+    .faq-q:hover { background: #f9fffe; }
+    .faq-q .arrow { transition: transform 0.2s; font-size: 0.8rem; color: var(--muted); }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s; font-size: 0.9rem; line-height: 1.65; color: #374151; background: #fafffe; }
+    .faq-a.open { max-height: 300px; padding: 14px 20px 18px; }
+    .adsbygoogle { display: block; margin: 28px auto; max-width: 728px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-size: 0.88rem; font-weight: 600; text-decoration: none; margin-bottom: 20px; }
+    .back-link:hover { text-decoration: underline; }
+    footer { background: var(--text); color: #9ca3af; text-align: center; padding: 28px 24px; font-size: 0.85rem; margin-top: 48px; }
+    footer a { color: #9ca3af; text-decoration: none; }
+    footer a:hover { color: white; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">FreeInsurance<span>IQ</span></a>
+  <div class="nav-links">
+    <a href="life-insurance-calculator.html">Life</a>
+    <a href="auto-insurance-calculator.html">Auto</a>
+    <a href="home-insurance-calculator.html">Home</a>
+    <a href="health-insurance-subsidy-calculator.html">Health</a>
+    <a href="renters-insurance-calculator.html">Renters</a>
+    <a href="disability-insurance-calculator.html">Disability</a>
+    <a href="long-term-care-cost-calculator.html">LTC</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>🚗 Auto Insurance Estimator</h1>
+  <p>Get an honest estimate of your monthly car insurance cost — no personal info required.</p>
+</div>
+
+<div class="container">
+  <a class="back-link" href="/">← All Calculators</a>
+
+  <div class="calc-panel">
+    <h2>Car Insurance Cost Estimator</h2>
+    <p class="subtitle">Estimates based on 2026 national averages by driver profile. Actual quotes will vary by insurer. · Updated June 2026</p>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Driver Age</label>
+        <input type="number" id="ai-age" value="35" min="16" max="80" />
+      </div>
+      <div class="form-group">
+        <label>Driving Record</label>
+        <select id="ai-record">
+          <option value="clean">Clean (no incidents)</option>
+          <option value="minor">1 Minor Violation</option>
+          <option value="major">1 Major Violation / At-Fault Accident</option>
+          <option value="multiple">Multiple Incidents</option>
+          <option value="dui">DUI/DWI</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Vehicle Value ($)</label>
+        <input type="number" id="ai-value" value="28000" placeholder="e.g. 28000" />
+      </div>
+      <div class="form-group">
+        <label>Annual Mileage</label>
+        <select id="ai-miles">
+          <option value="low">Low (&lt;7,500 mi/yr)</option>
+          <option value="avg" selected>Average (7,500–15,000)</option>
+          <option value="high">High (15,000–25,000)</option>
+          <option value="veryhigh">Very High (&gt;25,000)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Coverage Level</label>
+        <select id="ai-coverage">
+          <option value="liability">Liability Only (state minimum)</option>
+          <option value="standard" selected>Standard (liability + collision)</option>
+          <option value="full">Full Coverage (comprehensive)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>State</label>
+        <select id="ai-state">
+          <option value="1.00">National Average</option>
+          <option value="1.45">California</option>
+          <option value="1.55">Florida</option>
+          <option value="1.38">New York</option>
+          <option value="1.42">New Jersey</option>
+          <option value="1.28">Texas</option>
+          <option value="0.85">Ohio</option>
+          <option value="0.82">Vermont</option>
+          <option value="0.88">Wisconsin</option>
+          <option value="0.90">Iowa</option>
+          <option value="1.12">Illinois</option>
+          <option value="1.00">Other</option>
+        </select>
+      </div>
+    </div>
+
+    <button class="calc-btn" onclick="calcAuto()">Estimate My Premium</button>
+
+    <div id="auto-result" class="result-box">
+      <div class="result-main" id="ai-monthly"></div>
+      <div class="result-label">Estimated Monthly Premium Range</div>
+      <div class="result-breakdown">
+        <div class="result-item"><div class="label">Annual Estimate</div><div class="value" id="ai-annual"></div></div>
+        <div class="result-item"><div class="label">Coverage Level</div><div class="value" id="ai-cov-out"></div></div>
+        <div class="result-item"><div class="label">Record Adjustment</div><div class="value" id="ai-record-out"></div></div>
+        <div class="result-item"><div class="label">State Factor</div><div class="value" id="ai-state-out"></div></div>
+      </div>
+      <p id="ai-tip" style="margin-top:16px; font-size:0.88rem; color:#374151; line-height:1.6;"></p>
+    </div>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="content-section">
+    <p class="quick-answer">The national average car insurance rate in 2026 is approximately $167 per month for full coverage, up 22% from 2023. Rates vary widely based on age, driving record, vehicle value, and state — drivers in Florida and New York can pay 40–55% above the national average, while Midwest states like Ohio and Iowa average 15–20% below it.</p>
+
+    <h3>Why Car Insurance Rates Keep Rising in 2026</h3>
+    <p>Auto insurance premiums have risen dramatically over the past three years, driven by repair cost inflation, supply chain disruptions, and increased accident frequency. The average cost to repair a vehicle with sensors and advanced driver-assist systems (ADAS) has risen 30% since 2021. Insurers are also responding to record catastrophic losses — hail, flooding, and wildfire damage to parked vehicles now represent billions in annual claims. The result: even drivers with spotless records are seeing renewals 15–25% higher than their previous policy. Shopping your policy at every renewal is now more important than ever.</p>
+
+    <h3>The Biggest Factors That Determine Your Rate</h3>
+    <p>Insurance companies use dozens of variables to price auto policies, but five factors carry the most weight: your driving history (accidents and violations can raise rates 25–90%), your age (teens pay 2–3x the adult average; rates peak again after 70), your location (ZIP code affects rates more than most drivers realize), your vehicle (luxury and high-theft models cost more to insure), and your credit score in states where it's permitted. One DUI conviction can raise premiums by 70–120% for 3–7 years depending on your state. Keeping a clean record is the single most powerful rate control you have.</p>
+
+    <h3>How to Lower Your Car Insurance Costs Right Now</h3>
+    <p>The most effective way to reduce premiums is to shop multiple carriers at renewal — rates for the same driver and vehicle can differ by $800–$1,200 per year across insurers. Other proven strategies: bundling auto and home insurance (typically saves 10–25%), raising your deductible from $500 to $1,000 (saves 8–15% annually), dropping comprehensive coverage on older vehicles worth less than 10x the deductible, enrolling in telematics programs if you're a safe driver, and asking about discounts for defensive driving courses, good grades, or low mileage.</p>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is the average car insurance cost in 2026? <span class="arrow">▼</span></button>
+      <div class="faq-a">The national average for full coverage auto insurance is approximately $167/month ($2,004/year) in 2026. Liability-only coverage averages around $72/month nationally. Rates vary significantly by state — Florida drivers pay among the highest at $250+/month average, while Iowa drivers average around $120/month.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How much does a speeding ticket raise my insurance? <span class="arrow">▼</span></button>
+      <div class="faq-a">A single speeding ticket typically raises auto insurance premiums by 20–30% at renewal. The exact increase depends on your state, insurer, and speed over the limit. Most violations affect rates for 3–5 years. Completing a defensive driving course may offset some of the increase — check with your insurer before your renewal date.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Is full coverage worth it on an older car? <span class="arrow">▼</span></button>
+      <div class="faq-a">Full coverage is generally not worth it when the annual cost of comprehensive and collision exceeds 10% of the vehicle's actual cash value (ACV). For a car worth $6,000, if comprehensive + collision adds $600+/year, you'd be better off self-insuring. Use the 10% rule: if comp/collision cost ÷ car value &gt; 10%, consider dropping to liability only.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Can I get car insurance with a DUI? <span class="arrow">▼</span></button>
+      <div class="faq-a">Yes, you can get car insurance after a DUI, but expect rates to increase 70–120% and remain elevated for 5–10 years depending on your state. You'll likely need an SR-22 filing (proof of financial responsibility). High-risk carriers like The General, Dairyland, and Assigned Risk Plans specifically serve drivers with DUI records. Shopping is essential — rates vary enormously between carriers for high-risk drivers.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What discounts should I always ask my insurer about? <span class="arrow">▼</span></button>
+      <div class="faq-a">Always ask about: multi-policy (bundle home + auto, saves 10–25%), good driver (3–5 years accident-free, saves 10–20%), low mileage (under 7,500 mi/yr, saves 5–15%), good student (B+ GPA, saves 8–20% for students), paperless/autopay (saves 3–5%), defensive driving course (saves 5–15%), and new car discounts. Many insurers don't advertise all available discounts — always ask specifically.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 FreeInsuranceIQ · <a href="/">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+  <p style="margin-top:8px; font-size:0.78rem;">Estimates only. Actual rates depend on individual factors and vary by insurer. Not affiliated with any insurance company.</p>
+</footer>
+
+<script>
+  function calcAuto() {
+    const age      = +document.getElementById('ai-age').value;
+    const record   = document.getElementById('ai-record').value;
+    const value    = +document.getElementById('ai-value').value;
+    const miles    = document.getElementById('ai-miles').value;
+    const coverage = document.getElementById('ai-coverage').value;
+    const stateEl  = document.getElementById('ai-state');
+    const stateFactor = +stateEl.value;
+    const stateLabel  = stateEl.options[stateEl.selectedIndex].text;
+
+    // Base monthly by coverage
+    const baseMonthly = coverage === 'liability' ? 62 : coverage === 'standard' ? 118 : 167;
+
+    // Age multiplier
+    let ageMult = 1.0;
+    if (age < 20) ageMult = 2.8;
+    else if (age < 25) ageMult = 1.85;
+    else if (age < 30) ageMult = 1.25;
+    else if (age < 65) ageMult = 1.0;
+    else if (age < 70) ageMult = 1.1;
+    else ageMult = 1.28;
+
+    // Record multiplier
+    const recordMults = { clean: 1.0, minor: 1.26, major: 1.55, multiple: 1.85, dui: 2.1 };
+    const recordMult  = recordMults[record];
+    const recordLabels = { clean: 'No adjustment', minor: '+26%', major: '+55%', multiple: '+85%', dui: '+110%' };
+
+    // Mileage multiplier
+    const mileMults = { low: 0.88, avg: 1.0, high: 1.1, veryhigh: 1.22 };
+    const mileMult  = mileMults[miles];
+
+    // Vehicle value adjustment (higher value = higher premium)
+    const valueMult = value < 15000 ? 0.82 : value < 25000 ? 0.95 : value < 40000 ? 1.0 : value < 60000 ? 1.18 : 1.35;
+
+    const monthly = baseMonthly * ageMult * recordMult * mileMult * valueMult * stateFactor;
+    const lo = Math.round(monthly * 0.82);
+    const hi = Math.round(monthly * 1.22);
+    const annual = Math.round(monthly * 12);
+
+    const coverageLabels = { liability: 'Liability Only', standard: 'Standard', full: 'Full Coverage' };
+
+    document.getElementById('ai-monthly').textContent = `$${lo}–$${hi}/mo`;
+    document.getElementById('ai-annual').textContent = `$${(lo*12).toLocaleString()}–$${(hi*12).toLocaleString()}/yr`;
+    document.getElementById('ai-cov-out').textContent = coverageLabels[coverage];
+    document.getElementById('ai-record-out').textContent = recordLabels[record];
+    document.getElementById('ai-state-out').textContent = stateLabel;
+
+    let tip = '';
+    if (record === 'clean' && age >= 25 && age <= 65) {
+      tip = '💡 Clean record + prime age = best rates. Bundle with home insurance for an additional 10–25% savings.';
+    } else if (age < 25) {
+      tip = '💡 Young driver rates are high but improve significantly at age 25. Being added to a parent\'s policy is often 30–50% cheaper than your own policy.';
+    } else if (record === 'dui' || record === 'multiple') {
+      tip = '💡 High-risk rates are steep. Shop carriers who specialize in non-standard auto insurance — rates vary enormously. Rates typically improve after 5 years with no new incidents.';
+    } else {
+      tip = '💡 Shop at every renewal. The same driver can see $800–$1,200/year difference between carriers. Online comparison tools make this easy.';
+    }
+    document.getElementById('ai-tip').textContent = tip;
+    document.getElementById('auto-result').classList.add('show');
+  }
+
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+  }
+</script>
+</body>
+</html>

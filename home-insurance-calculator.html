@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Insurance Calculator — Estimate Homeowners Insurance Cost 2026 | FreeInsuranceIQ</title>
+  <meta name="description" content="Estimate your annual homeowners insurance cost in 2026. Free calculator based on home value, location risk, deductible, and personal property. No sign-up required." />
+  <link rel="canonical" href="https://freeinsuranceiq.com/home-insurance-calculator.html" />
+  <!-- GA4: TBD -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "WebApplication", "name": "Home Insurance Calculator", "url": "https://freeinsuranceiq.com/home-insurance-calculator.html", "description": "Estimate annual homeowners insurance based on home replacement value, location risk, and deductible.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --primary: #0f9e6e; --primary-dark: #0b7a55; --accent: #f59e0b; --bg: #f3f9f7; --card: #ffffff; --text: #1a2e25; --muted: #6b7280; --border: #d1e8df; --radius: 12px; --shadow: 0 2px 16px rgba(15,158,110,0.08); }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .page-hero { background: linear-gradient(135deg, #0f9e6e 0%, #0b7a55 100%); color: white; text-align: center; padding: 44px 24px 36px; }
+    .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; }
+    .page-hero p { font-size: 1rem; opacity: 0.9; max-width: 520px; margin: 0 auto; }
+    .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
+    .calc-panel { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
+    .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
+    .calc-panel .subtitle { color: var(--muted); font-size: 0.88rem; margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; }
+    .form-group input, .form-group select { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); background: var(--bg); transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary); background: white; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+    .calc-btn:hover { background: var(--primary-dark); }
+    .result-box { background: linear-gradient(135deg, #f0fdf8, #fef9ec); border: 1px solid #a7f3d0; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box.show { display: block; }
+    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+    .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
+    .result-item .value { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+    .quick-answer { background: #f0fdf8; border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 6px; font-size: 0.95rem; margin-bottom: 22px; line-height: 1.6; }
+    .content-section { margin-bottom: 32px; }
+    .content-section h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
+    .content-section p { font-size: 0.93rem; line-height: 1.7; color: #374151; margin-bottom: 14px; }
+    .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { width: 100%; background: var(--card); border: none; padding: 16px 20px; font-size: 0.95rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--text); }
+    .faq-q:hover { background: #f9fffe; }
+    .faq-q .arrow { transition: transform 0.2s; font-size: 0.8rem; color: var(--muted); }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s; font-size: 0.9rem; line-height: 1.65; color: #374151; background: #fafffe; }
+    .faq-a.open { max-height: 300px; padding: 14px 20px 18px; }
+    .adsbygoogle { display: block; margin: 28px auto; max-width: 728px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-size: 0.88rem; font-weight: 600; text-decoration: none; margin-bottom: 20px; }
+    .back-link:hover { text-decoration: underline; }
+    footer { background: var(--text); color: #9ca3af; text-align: center; padding: 28px 24px; font-size: 0.85rem; margin-top: 48px; }
+    footer a { color: #9ca3af; text-decoration: none; }
+    footer a:hover { color: white; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">FreeInsurance<span>IQ</span></a>
+  <div class="nav-links">
+    <a href="life-insurance-calculator.html">Life</a>
+    <a href="auto-insurance-calculator.html">Auto</a>
+    <a href="home-insurance-calculator.html">Home</a>
+    <a href="health-insurance-subsidy-calculator.html">Health</a>
+    <a href="renters-insurance-calculator.html">Renters</a>
+    <a href="disability-insurance-calculator.html">Disability</a>
+    <a href="long-term-care-cost-calculator.html">LTC</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+<div class="page-hero">
+  <h1>🏠 Home Insurance Calculator</h1>
+  <p>Estimate your homeowners insurance cost based on your home's real replacement value — not just the market price.</p>
+</div>
+<div class="container">
+  <a class="back-link" href="/">← All Calculators</a>
+  <div class="calc-panel">
+    <h2>Homeowners Insurance Cost Estimator</h2>
+    <p class="subtitle">Based on 2026 national average rates. Use your home's replacement cost (what it costs to rebuild), not market value. · Updated June 2026</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Home Replacement Value ($) <small style="font-weight:400;color:var(--muted)">(rebuild cost, not sale price)</small></label>
+        <input type="number" id="hi-value" value="350000" placeholder="e.g. 350000" />
+      </div>
+      <div class="form-group">
+        <label>Location Risk</label>
+        <select id="hi-risk">
+          <option value="low">Low (Midwest, no major hazards)</option>
+          <option value="medium" selected>Medium (Southeast, moderate risk)</option>
+          <option value="high">High (FL, CA, TX coast, tornado alley)</option>
+          <option value="veryhigh">Very High (CA wildfire zone, FL coast)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Deductible Amount ($)</label>
+        <select id="hi-deductible">
+          <option value="500">$500</option>
+          <option value="1000" selected>$1,000</option>
+          <option value="2500">$2,500</option>
+          <option value="5000">$5,000</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Personal Property Value ($)</label>
+        <input type="number" id="hi-property" value="50000" placeholder="e.g. 50000" />
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Liability Coverage Amount ($)</label>
+      <select id="hi-liability">
+        <option value="100000">$100,000</option>
+        <option value="300000" selected>$300,000</option>
+        <option value="500000">$500,000</option>
+      </select>
+    </div>
+    <button class="calc-btn" onclick="calcHome()">Estimate My Premium</button>
+    <div id="home-result" class="result-box">
+      <div class="result-main" id="hi-annual"></div>
+      <div class="result-label">Estimated Annual Premium</div>
+      <div class="result-breakdown">
+        <div class="result-item"><div class="label">Monthly Equivalent</div><div class="value" id="hi-monthly"></div></div>
+        <div class="result-item"><div class="label">Dwelling Coverage</div><div class="value" id="hi-dwelling"></div></div>
+        <div class="result-item"><div class="label">Rate per $1,000</div><div class="value" id="hi-rate"></div></div>
+        <div class="result-item"><div class="label">Deductible</div><div class="value" id="hi-ded-out"></div></div>
+      </div>
+      <p id="hi-note" style="margin-top:16px; font-size:0.88rem; color:#374151; line-height:1.6;"></p>
+    </div>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="content-section">
+    <p class="quick-answer">The average homeowners insurance cost in 2026 is approximately $2,285 per year ($190/month) nationally, but it ranges from $900/year in low-risk states to over $5,900/year in Florida and Oklahoma. The single biggest mistake homeowners make is insuring for market value instead of replacement cost — you need enough to rebuild your home from the ground up, not just sell it.</p>
+
+    <h3>Why Home Insurance Rates Are Skyrocketing in 2026</h3>
+    <p>Homeowners insurance has become one of the most volatile insurance lines in the country. Construction labor costs are up 35% since 2020. Materials like lumber, concrete, and copper wiring have experienced price spikes. Climate change is driving more frequent and severe weather — the number of billion-dollar disaster events is rising year over year. In response, major insurers including State Farm, Allstate, and Farmers have stopped writing new policies in California and pulled back from Florida, leaving hundreds of thousands of homeowners scrambling. In states where coverage remains available, rate increases of 20–40% at renewal are now common.</p>
+
+    <h3>Replacement Cost vs. Market Value: A Critical Distinction</h3>
+    <p>One of the most dangerous mistakes in homeowners insurance is confusing market value with replacement cost. Your home's market value includes the land and reflects supply and demand. Replacement cost is what it would cost to rebuild the structure from scratch with similar materials — which is often 20–40% more than you'd expect. If your home sold for $400,000 but would cost $550,000 to rebuild, you need $550,000 in dwelling coverage. Underinsuring by even 20% can result in a proportional reduction in your claim payout — a clause called coinsurance that most homeowners don't discover until they file a claim.</p>
+
+    <h3>What Standard Homeowners Insurance Does NOT Cover</h3>
+    <p>Most homeowners are surprised to learn their standard policy excludes flood damage, earthquake damage, sewer backup, and normal wear and tear. Flood insurance must be purchased separately through FEMA's National Flood Insurance Program (NFIP) or private insurers — and 40% of flood claims come from homes outside high-risk flood zones. If you live in a state with significant earthquake risk, a separate earthquake rider or policy is essential. With climate change making flood events more unpredictable, FEMA recommends that all homeowners — not just those in designated flood zones — consider flood insurance.</p>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How much homeowners insurance do I need? <span class="arrow">▼</span></button>
+      <div class="faq-a">You need enough dwelling coverage to fully rebuild your home at current construction costs — not its market value. Use $150–$250 per square foot as a rough guide for dwelling coverage (higher in expensive markets). Add 20–30% as an extended replacement cost buffer. Personal property coverage is typically 50–70% of dwelling coverage; liability should be at least $300,000.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Does homeowners insurance cover flood damage? <span class="arrow">▼</span></button>
+      <div class="faq-a">No. Standard homeowners insurance does not cover flood damage from outside water sources. You need a separate flood insurance policy through FEMA's National Flood Insurance Program (NFIP) or a private flood insurer. NFIP coverage averages $700–$1,000/year. Even if you're not in a designated flood zone, 40% of flood claims come from low-to-moderate risk areas — especially relevant given increased extreme rainfall events.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Should I raise my home insurance deductible to save money? <span class="arrow">▼</span></button>
+      <div class="faq-a">Raising your deductible from $1,000 to $2,500 typically saves 10–20% annually. It makes sense if you have the savings to cover the higher deductible out of pocket. A good rule: only raise your deductible to an amount you could comfortably pay today without financial stress. For most homeowners, $1,000–$2,500 is the sweet spot between savings and risk.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is loss of use coverage and do I need it? <span class="arrow">▼</span></button>
+      <div class="faq-a">Loss of use coverage pays for temporary housing and living expenses if your home becomes uninhabitable due to a covered claim. It's typically included in standard policies at 20–30% of dwelling coverage at no extra cost. With average hotel rates exceeding $150/night and rebuild timelines stretching 6–18 months for major losses, this coverage is invaluable and worth verifying with your insurer.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">My insurer dropped me — what are my options? <span class="arrow">▼</span></button>
+      <div class="faq-a">If a traditional insurer drops you, first contact an independent insurance broker who can access multiple markets. If private coverage is unavailable in your area, apply to your state's FAIR Plan (Insurer of Last Resort) — every state has one. FAIR Plan coverage is more expensive and basic, but it keeps you insured. Also consider an excess and surplus (E&amp;S) lines insurer, which specializes in non-standard risks. Document everything and explore state consumer protection resources if you believe you were unfairly non-renewed.</div>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>© 2026 FreeInsuranceIQ · <a href="/">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+  <p style="margin-top:8px; font-size:0.78rem;">Estimates only. Not insurance advice. Consult a licensed insurance professional.</p>
+</footer>
+<script>
+  function calcHome() {
+    const value      = +document.getElementById('hi-value').value || 350000;
+    const risk       = document.getElementById('hi-risk').value;
+    const deductible = +document.getElementById('hi-deductible').value;
+    const property   = +document.getElementById('hi-property').value || 0;
+    const liability  = +document.getElementById('hi-liability').value;
+
+    // Base rate per $1,000 of dwelling value (national avg ~$5.60/$1k in 2026)
+    const riskRates = { low: 3.8, medium: 5.6, high: 9.2, veryhigh: 14.5 };
+    let baseRate = riskRates[risk];
+
+    // Deductible adjustment
+    const dedAdj = { 500: 1.12, 1000: 1.0, 2500: 0.87, 5000: 0.76 };
+    baseRate *= dedAdj[deductible];
+
+    // Dwelling premium
+    const dwellingPremium = (value / 1000) * baseRate;
+
+    // Property coverage add (~$0.80 per $1k of personal property)
+    const propPremium = (property / 1000) * 0.80;
+
+    // Liability add
+    const liabAdds = { 100000: 0, 300000: 48, 500000: 90 };
+    const liabAdd = liabAdds[liability] || 0;
+
+    const annual = Math.round(dwellingPremium + propPremium + liabAdd);
+    const monthly = (annual / 12).toFixed(0);
+    const ratePerK = baseRate.toFixed(2);
+
+    document.getElementById('hi-annual').textContent = '$' + annual.toLocaleString() + '/yr';
+    document.getElementById('hi-monthly').textContent = '$' + monthly + '/mo';
+    document.getElementById('hi-dwelling').textContent = '$' + value.toLocaleString();
+    document.getElementById('hi-rate').textContent = '$' + ratePerK + ' per $1k';
+    document.getElementById('hi-ded-out').textContent = '$' + Number(deductible).toLocaleString();
+
+    const riskNotes = {
+      low: '✅ Low-risk location. Standard coverage should be readily available from major carriers.',
+      medium: '💡 Bundle home and auto insurance to save 10–25% on both policies.',
+      high: '⚠️ High-risk area. Shop multiple carriers and consider separate wind or hail endorsements.',
+      veryhigh: '🔴 Very high-risk zone. Verify your insurer is still writing new policies in your area. FAIR Plan may be your fallback.'
+    };
+    document.getElementById('hi-note').textContent = riskNotes[risk];
+    document.getElementById('home-result').classList.add('show');
+  }
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+  }
+</script>
+</body>
+</html>

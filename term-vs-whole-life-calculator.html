@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Term vs. Whole Life Insurance Calculator — Side-by-Side Comparison 2026 | FreeInsuranceIQ</title>
+  <meta name="description" content="Compare term life vs. whole life insurance costs side by side in 2026. See 20-year total costs, monthly premiums, and what you actually get for your money. Free, no email needed." />
+  <link rel="canonical" href="https://freeinsuranceiq.com/term-vs-whole-life-calculator.html" />
+  <!-- GA4: TBD -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "WebApplication", "name": "Term vs. Whole Life Insurance Calculator", "url": "https://freeinsuranceiq.com/term-vs-whole-life-calculator.html", "description": "Side-by-side comparison of term life vs. whole life insurance costs, premiums, and 20-year value.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --primary: #0f9e6e; --primary-dark: #0b7a55; --accent: #f59e0b; --bg: #f3f9f7; --card: #ffffff; --text: #1a2e25; --muted: #6b7280; --border: #d1e8df; --radius: 12px; --shadow: 0 2px 16px rgba(15,158,110,0.08); }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .page-hero { background: linear-gradient(135deg, #0f9e6e 0%, #0b7a55 100%); color: white; text-align: center; padding: 44px 24px 36px; }
+    .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; }
+    .page-hero p { font-size: 1rem; opacity: 0.9; max-width: 520px; margin: 0 auto; }
+    .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
+    .calc-panel { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
+    .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
+    .calc-panel .subtitle { color: var(--muted); font-size: 0.88rem; margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; }
+    .form-group input, .form-group select { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); background: var(--bg); transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary); background: white; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+    .calc-btn:hover { background: var(--primary-dark); }
+    .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+    .compare-card { border-radius: var(--radius); padding: 20px; border: 2px solid; }
+    .compare-card.term { background: #f0fdf8; border-color: var(--primary); }
+    .compare-card.whole { background: #fef9ec; border-color: var(--accent); }
+    .compare-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 14px; }
+    .compare-card.term h3 { color: var(--primary); }
+    .compare-card.whole h3 { color: var(--accent-dark, #d97706); }
+    .compare-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 0.88rem; }
+    .compare-row:last-child { border-bottom: none; }
+    .compare-row .clabel { color: var(--muted); }
+    .compare-row .cvalue { font-weight: 700; }
+    .winner-badge { display: inline-block; background: var(--primary); color: white; border-radius: 50px; padding: 3px 10px; font-size: 0.72rem; font-weight: 700; margin-left: 8px; }
+    .verdict { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-top: 16px; font-size: 0.9rem; line-height: 1.65; color: #374151; }
+    .quick-answer { background: #f0fdf8; border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 6px; font-size: 0.95rem; margin-bottom: 22px; line-height: 1.6; }
+    .content-section { margin-bottom: 32px; }
+    .content-section h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
+    .content-section p { font-size: 0.93rem; line-height: 1.7; color: #374151; margin-bottom: 14px; }
+    .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { width: 100%; background: var(--card); border: none; padding: 16px 20px; font-size: 0.95rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--text); }
+    .faq-q:hover { background: #f9fffe; }
+    .faq-q .arrow { transition: transform 0.2s; font-size: 0.8rem; color: var(--muted); }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s; font-size: 0.9rem; line-height: 1.65; color: #374151; background: #fafffe; }
+    .faq-a.open { max-height: 300px; padding: 14px 20px 18px; }
+    .adsbygoogle { display: block; margin: 28px auto; max-width: 728px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-size: 0.88rem; font-weight: 600; text-decoration: none; margin-bottom: 20px; }
+    .back-link:hover { text-decoration: underline; }
+    footer { background: var(--text); color: #9ca3af; text-align: center; padding: 28px 24px; font-size: 0.85rem; margin-top: 48px; }
+    footer a { color: #9ca3af; text-decoration: none; }
+    footer a:hover { color: white; }
+    #compare-result { display: none; }
+    #compare-result.show { display: block; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .compare-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">FreeInsurance<span>IQ</span></a>
+  <div class="nav-links">
+    <a href="life-insurance-calculator.html">Life</a>
+    <a href="auto-insurance-calculator.html">Auto</a>
+    <a href="home-insurance-calculator.html">Home</a>
+    <a href="health-insurance-subsidy-calculator.html">Health</a>
+    <a href="renters-insurance-calculator.html">Renters</a>
+    <a href="disability-insurance-calculator.html">Disability</a>
+    <a href="long-term-care-cost-calculator.html">LTC</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+<div class="page-hero">
+  <h1>⚖️ Term vs. Whole Life Calculator</h1>
+  <p>See the real 20-year cost difference side by side — before an insurance agent shows you the whole life pitch.</p>
+</div>
+<div class="container">
+  <a class="back-link" href="/">← All Calculators</a>
+  <div class="calc-panel">
+    <h2>Term Life vs. Whole Life Insurance Comparison</h2>
+    <p class="subtitle">Based on 2026 industry average premium rates. Actual quotes vary by insurer and health history. · Updated June 2026</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Coverage Amount ($)</label>
+        <input type="number" id="tv-coverage" value="500000" placeholder="e.g. 500000" />
+      </div>
+      <div class="form-group">
+        <label>Your Age</label>
+        <input type="number" id="tv-age" value="35" min="20" max="65" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Gender</label>
+        <select id="tv-gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Health Rating</label>
+        <select id="tv-health">
+          <option value="preferred">Preferred Plus (excellent health)</option>
+          <option value="standard" selected>Standard (average health)</option>
+          <option value="smoker">Smoker / Tobacco User</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Term Length (for term life comparison)</label>
+      <select id="tv-term">
+        <option value="10">10-year term</option>
+        <option value="20" selected>20-year term</option>
+        <option value="30">30-year term</option>
+      </select>
+    </div>
+    <button class="calc-btn" onclick="calcTermVsWhole()">Compare Policies</button>
+
+    <div id="compare-result">
+      <div class="compare-grid">
+        <div class="compare-card term">
+          <h3>🌿 Term Life <span class="winner-badge">Lower Cost</span></h3>
+          <div class="compare-row"><span class="clabel">Monthly Premium</span><span class="cvalue" id="term-monthly"></span></div>
+          <div class="compare-row"><span class="clabel">Annual Premium</span><span class="cvalue" id="term-annual"></span></div>
+          <div class="compare-row"><span class="clabel">20-Year Total Cost</span><span class="cvalue" id="term-20yr"></span></div>
+          <div class="compare-row"><span class="clabel">Death Benefit</span><span class="cvalue" id="term-db"></span></div>
+          <div class="compare-row"><span class="clabel">Cash Value</span><span class="cvalue">None</span></div>
+          <div class="compare-row"><span class="clabel">Coverage Period</span><span class="cvalue" id="term-period"></span></div>
+        </div>
+        <div class="compare-card whole">
+          <h3>🏦 Whole Life</h3>
+          <div class="compare-row"><span class="clabel">Monthly Premium</span><span class="cvalue" id="whole-monthly"></span></div>
+          <div class="compare-row"><span class="clabel">Annual Premium</span><span class="cvalue" id="whole-annual"></span></div>
+          <div class="compare-row"><span class="clabel">20-Year Total Cost</span><span class="cvalue" id="whole-20yr"></span></div>
+          <div class="compare-row"><span class="clabel">Death Benefit</span><span class="cvalue" id="whole-db"></span></div>
+          <div class="compare-row"><span class="clabel">Est. Cash Value (20 yr)</span><span class="cvalue" id="whole-cv"></span></div>
+          <div class="compare-row"><span class="clabel">Coverage Period</span><span class="cvalue">Lifetime</span></div>
+        </div>
+      </div>
+      <div class="verdict" id="tv-verdict"></div>
+    </div>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="content-section">
+    <p class="quick-answer">A healthy 35-year-old non-smoker can get $500,000 in 20-year term life insurance for about $28/month. The same $500,000 in whole life insurance costs approximately $300–$450/month — 10–15 times more. Over 20 years, term costs roughly $6,720 total while whole life costs $72,000–$108,000. The "buy term and invest the difference" strategy typically builds far more wealth than whole life's cash value component.</p>
+
+    <h3>How Term Life Insurance Works</h3>
+    <p>Term life insurance provides a death benefit for a specified period — typically 10, 20, or 30 years. If you die within the term, your beneficiaries receive the full death benefit tax-free. If you outlive the term, the policy expires with no payout (unless you've purchased a return-of-premium rider). Term is pure protection at the lowest cost — you're paying for coverage, not an investment vehicle. For most families with a mortgage, young children, and debt, a 20 or 30-year term policy provides maximum protection during the years it matters most, at a price that doesn't strain the household budget.</p>
+
+    <h3>How Whole Life Insurance Works</h3>
+    <p>Whole life insurance combines a death benefit with a savings component called cash value, which grows at a guaranteed rate over time. Premiums are fixed and the coverage is permanent — it never expires as long as you pay premiums. The cash value grows tax-deferred and can be borrowed against or withdrawn. Whole life premiums are typically 8–15 times higher than term for the same death benefit. Financial planners debate the merits vigorously: whole life advocates point to guaranteed returns, tax advantages, and estate planning benefits; critics note that the cash value growth rate (typically 1–4%) often underperforms what a disciplined investor could earn investing the premium difference in index funds.</p>
+
+    <h3>When Whole Life Insurance Makes Sense</h3>
+    <p>Whole life isn't inherently bad — it's simply mismatched to most consumer needs most of the time. Cases where whole life can be appropriate: high-net-worth estate planning (to provide liquidity for estate taxes), business owners funding buy-sell agreements, individuals who've maxed out all other tax-advantaged accounts and want guaranteed growth, parents of children with lifelong special needs requiring permanent coverage, and some final expense planning situations. For the vast majority of working Americans with dependents and a mortgage, term life insurance is the right tool — and the premium savings invested wisely over 20 years typically far exceed what whole life cash value delivers.</p>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Is whole life insurance ever a good investment? <span class="arrow">▼</span></button>
+      <div class="faq-a">Whole life insurance is not primarily an investment — it's insurance with a guaranteed savings component. The internal rate of return on whole life cash value typically ranges from 1–4%, which is below what a diversified stock index fund historically returns over 20+ years (average ~7–10%). Whole life does have real advantages: guaranteed growth, tax-deferred accumulation, tax-free loans, and creditor protection in some states. It makes most sense for specific estate planning, business succession, and high-income situations after all other tax-advantaged accounts are maxed out.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Can I convert my term life policy to whole life? <span class="arrow">▼</span></button>
+      <div class="faq-a">Many term policies include a conversion option that allows you to convert to a permanent policy (whole life or universal life) without a new medical exam, typically before a conversion deadline (often the first 5–10 years of the term). This is valuable if your health declines and you can no longer qualify for new coverage. When shopping for term insurance, look for policies with strong conversion rights — it preserves your options without locking you into a whole life premium now.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What happens to whole life cash value when I die? <span class="arrow">▼</span></button>
+      <div class="faq-a">This surprises many policyholders: when you die, your beneficiaries receive the death benefit — but the insurance company typically keeps the cash value. You get one or the other, not both. Some policies are structured to pay death benefit plus cash value, but these are the exception and come with higher premiums. This is a key reason the "buy term and invest the difference" strategy can outperform whole life for wealth building — with term plus investments, your heirs potentially receive both the death benefit and the accumulated investments.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is universal life insurance and how does it differ? <span class="arrow">▼</span></button>
+      <div class="faq-a">Universal life (UL) is permanent insurance like whole life, but with flexible premiums and death benefits that can be adjusted. It also builds cash value, but unlike whole life's guaranteed returns, UL cash value is tied to current interest rates or (for indexed UL) to a market index. UL can be powerful for specific planning needs but is more complex and carries lapse risk if cash value is depleted. Variable universal life (VUL) invests cash value in sub-accounts similar to mutual funds — higher growth potential but investment risk falls on the policyholder.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What does "return of premium" term life mean? <span class="arrow">▼</span></button>
+      <div class="faq-a">Return of premium (ROP) term life refunds all your premiums if you outlive the policy term. If you buy a 20-year ROP term and outlive it, you get back every dollar you paid in. The catch: ROP premiums are typically 2–3 times higher than standard term. Financial analysis generally shows that investing the premium difference in a simple index fund outperforms what you'd get back from ROP — but ROP appeals to people who want a "heads I win, tails I don't lose" option and don't trust themselves to invest the difference.</div>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>© 2026 FreeInsuranceIQ · <a href="/">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+  <p style="margin-top:8px; font-size:0.78rem;">Estimates based on 2026 industry average rates. Actual premiums vary by insurer and individual health history. Not insurance advice.</p>
+</footer>
+<script>
+  const fmt = n => '$' + Math.round(n).toLocaleString();
+
+  function calcTermVsWhole() {
+    const coverage = +document.getElementById('tv-coverage').value || 500000;
+    const age      = +document.getElementById('tv-age').value || 35;
+    const gender   = document.getElementById('tv-gender').value;
+    const health   = document.getElementById('tv-health').value;
+    const termYrs  = +document.getElementById('tv-term').value || 20;
+
+    // Per-$1000 of coverage base rates for 20-year term (male, standard)
+    // Age bands: 20s, 30s, 40s, 50s, 60s
+    const termBaseRates = {
+      20: 0.038, 25: 0.042, 30: 0.048, 35: 0.056, 40: 0.085,
+      45: 0.14,  50: 0.22,  55: 0.36,  60: 0.58,  65: 0.92
+    };
+    const ageBand = Math.floor(age / 5) * 5;
+    const clampedAge = Math.max(20, Math.min(65, ageBand));
+    let termMonthlyPer1k = termBaseRates[clampedAge] || 0.056;
+
+    // Term length adjustment
+    const termLenMult = { 10: 0.72, 20: 1.0, 30: 1.38 };
+    termMonthlyPer1k *= (termLenMult[termYrs] || 1.0);
+
+    // Gender adjustment
+    if (gender === 'female') termMonthlyPer1k *= 0.82;
+
+    // Health adjustment
+    const healthMult = { preferred: 0.72, standard: 1.0, smoker: 2.35 };
+    termMonthlyPer1k *= healthMult[health];
+
+    const termMonthly = termMonthlyPer1k * (coverage / 1000);
+    const termAnnual  = termMonthly * 12;
+    const term20yr    = termMonthly * 12 * 20;
+
+    // Whole life is typically 10-15x term for same coverage
+    const wholeMult = health === 'smoker' ? 8 : 11;
+    const wholeMonthly = termMonthly * wholeMult;
+    const wholeAnnual  = wholeMonthly * 12;
+    const whole20yr    = wholeMonthly * 12 * 20;
+
+    // Estimated cash value at 20 years (~30-40% of premiums paid, simplified)
+    const wholeCashValue = whole20yr * 0.35;
+
+    // Premium difference invested at 7%
+    const monthlyDiff  = wholeMonthly - termMonthly;
+    let investedValue  = 0;
+    for (let i = 0; i < 240; i++) {
+      investedValue = (investedValue + monthlyDiff) * (1 + 0.07/12);
+    }
+
+    document.getElementById('term-monthly').textContent = fmt(termMonthly) + '/mo';
+    document.getElementById('term-annual').textContent = fmt(termAnnual) + '/yr';
+    document.getElementById('term-20yr').textContent = fmt(term20yr);
+    document.getElementById('term-db').textContent = fmt(coverage);
+    document.getElementById('term-period').textContent = termYrs + '-year term';
+
+    document.getElementById('whole-monthly').textContent = fmt(wholeMonthly) + '/mo';
+    document.getElementById('whole-annual').textContent = fmt(wholeAnnual) + '/yr';
+    document.getElementById('whole-20yr').textContent = fmt(whole20yr);
+    document.getElementById('whole-db').textContent = fmt(coverage);
+    document.getElementById('whole-cv').textContent = '~' + fmt(wholeCashValue);
+
+    const savings20yr = Math.round(whole20yr - term20yr);
+    const verdict = `📊 Over 20 years, term life costs ${fmt(term20yr)} vs. ${fmt(whole20yr)} for whole life — a difference of ${fmt(savings20yr)}. If that ${fmt(monthlyDiff)}/month difference were invested in a low-cost index fund earning 7%/year, it would grow to approximately ${fmt(investedValue)} — compared to the whole life policy's estimated ${fmt(wholeCashValue)} in cash value. For most people, "buy term and invest the difference" builds significantly more wealth. Whole life may make sense for estate planning, business succession, or if you've maxed all other tax-advantaged accounts.`;
+    document.getElementById('tv-verdict').textContent = verdict;
+    document.getElementById('compare-result').classList.add('show');
+  }
+
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+  }
+</script>
+</body>
+</html>

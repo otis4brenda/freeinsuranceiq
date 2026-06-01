@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreeInsuranceIQ — Free Insurance Calculators: Life, Auto, Home, Health & More</title>
+  <meta name="description" content="Free insurance calculators that give real answers — no email required, no sales pitch. Life, auto, home, health, renters, disability, and more." />
+  <meta name="keywords" content="insurance calculator, life insurance calculator, auto insurance calculator, home insurance calculator, health insurance subsidy calculator, renters insurance calculator" />
+  <link rel="canonical" href="https://freeinsuranceiq.com/" />
+  <!-- GA4: TBD -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "FreeInsuranceIQ — Free Insurance Calculators",
+    "url": "https://freeinsuranceiq.com",
+    "description": "Free insurance calculators for life, auto, home, health, renters, disability, long-term care, and more. No sign-up required."
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #0f9e6e;
+      --primary-dark: #0b7a55;
+      --accent: #f59e0b;
+      --accent-dark: #d97706;
+      --bg: #f3f9f7;
+      --card: #ffffff;
+      --text: #1a2e25;
+      --muted: #6b7280;
+      --border: #d1e8df;
+      --radius: 12px;
+      --shadow: 0 2px 16px rgba(15,158,110,0.08);
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* NAV */
+    nav {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+    .nav-logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--primary); }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0f9e6e 0%, #0b7a55 50%, #064e35 100%);
+      color: white;
+      text-align: center;
+      padding: 60px 24px 52px;
+    }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; margin-bottom: 14px; }
+    .hero p { font-size: 1.1rem; opacity: 0.92; max-width: 580px; margin: 0 auto 20px; line-height: 1.6; }
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 50px;
+      padding: 6px 16px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+
+    /* ADSENSE */
+    .adsbygoogle { display: block; margin: 28px auto; max-width: 728px; text-align: center; }
+
+    /* MAIN CONTENT */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 36px 0 18px;
+      color: var(--text);
+    }
+
+    /* TOOL GRID */
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .tool-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      border: 1px solid var(--border);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+    .tool-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(15,158,110,0.14);
+    }
+    .tool-icon { font-size: 2.2rem; margin-bottom: 12px; }
+    .tool-card h2 { font-size: 1.05rem; font-weight: 700; margin-bottom: 8px; }
+    .tool-card p { font-size: 0.87rem; color: var(--muted); margin-bottom: 18px; line-height: 1.55; flex: 1; }
+    .cpc-badge {
+      display: inline-block;
+      background: #fef3c7;
+      color: #92400e;
+      border-radius: 50px;
+      padding: 2px 10px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 11px 20px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+      width: 100%;
+      text-align: center;
+    }
+    .btn-primary:hover { background: var(--primary-dark); }
+
+    /* TRUST STRIP */
+    .trust-strip {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 28px;
+      display: flex;
+      gap: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 32px 0;
+    }
+    .trust-item { display: flex; align-items: center; gap: 8px; font-size: 0.88rem; color: var(--muted); font-weight: 500; }
+    .trust-item span:first-child { font-size: 1.3rem; }
+
+    /* FOOTER */
+    footer {
+      background: var(--text);
+      color: #9ca3af;
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 0.85rem;
+      margin-top: 48px;
+    }
+    footer a { color: #9ca3af; text-decoration: none; }
+    footer a:hover { color: white; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .trust-strip { flex-direction: column; gap: 14px; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">FreeInsurance<span>IQ</span></a>
+  <div class="nav-links">
+    <a href="life-insurance-calculator.html">Life</a>
+    <a href="auto-insurance-calculator.html">Auto</a>
+    <a href="home-insurance-calculator.html">Home</a>
+    <a href="health-insurance-subsidy-calculator.html">Health</a>
+    <a href="renters-insurance-calculator.html">Renters</a>
+    <a href="disability-insurance-calculator.html">Disability</a>
+    <a href="long-term-care-cost-calculator.html">Long-Term Care</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<div class="hero">
+  <h1>Understand Your Insurance in 60 Seconds</h1>
+  <p>Free calculators that give you real answers — no email required, no sales pitch, no jargon.</p>
+  <span class="hero-badge">✅ 100% Free · No Sign-Up · No Data Sold</span>
+</div>
+
+<div class="container">
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-5522299769790775"
+       data-ad-slot="5890228291"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="trust-strip">
+    <div class="trust-item"><span>🔒</span><span>No personal data collected</span></div>
+    <div class="trust-item"><span>🚫</span><span>Not affiliated with any insurer</span></div>
+    <div class="trust-item"><span>📊</span><span>Results stay in your browser</span></div>
+    <div class="trust-item"><span>💡</span><span>Updated with 2026 data</span></div>
+  </div>
+
+  <div class="section-title">Choose an Insurance Calculator</div>
+  <div class="tool-grid">
+
+    <div class="tool-card">
+      <div class="tool-icon">🛡️</div>
+      <h2>Life Insurance Calculator</h2>
+      <p>Find out exactly how much life insurance coverage you need to protect your family — based on your income, debts, and dependents.</p>
+      <a class="btn-primary" href="life-insurance-calculator.html">Calculate Now →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">🚗</div>
+      <h2>Auto Insurance Estimator</h2>
+      <p>Estimate your monthly car insurance cost based on your age, driving record, vehicle value, and coverage level.</p>
+      <a class="btn-primary" href="auto-insurance-calculator.html">Calculate Now →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">🏠</div>
+      <h2>Home Insurance Calculator</h2>
+      <p>Estimate your annual homeowners insurance premium based on your home's replacement value, location risk, and deductible.</p>
+      <a class="btn-primary" href="home-insurance-calculator.html">Calculate Now →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">🏥</div>
+      <h2>Health Insurance Subsidy Calculator</h2>
+      <p>Estimate your ACA marketplace subsidy and find out how much you'll actually pay per month for health insurance in 2026.</p>
+      <a class="btn-primary" href="health-insurance-subsidy-calculator.html">Calculate Now →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">🏢</div>
+      <h2>Renters Insurance Calculator</h2>
+      <p>Estimate how much renters insurance you actually need and what it will cost — based on the real value of your belongings.</p>
+      <a class="btn-primary" href="renters-insurance-calculator.html">Calculate Now →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">🩺</div>
+      <h2>Disability Insurance Calculator</h2>
+      <p>See exactly how long you could survive financially if you couldn't work — and how much disability coverage you need to close the gap.</p>
+      <a class="btn-primary" href="disability-insurance-calculator.html">Calculate Now →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">🧓</div>
+      <h2>Long-Term Care Cost Calculator</h2>
+      <p>Estimate future long-term care costs by state and care type. Know what to plan for before you need it.</p>
+      <a class="btn-primary" href="long-term-care-cost-calculator.html">Calculate Now →</a>
+    </div>
+
+    <div class="tool-card">
+      <div class="tool-icon">⚖️</div>
+      <h2>Term vs. Whole Life Comparison</h2>
+      <p>Side-by-side cost comparison of term life vs. whole life insurance — 20-year total costs, premiums, and what you actually get.</p>
+      <a class="btn-primary" href="term-vs-whole-life-calculator.html">Calculate Now →</a>
+    </div>
+
+  </div>
+
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-5522299769790775"
+       data-ad-slot="5890228291"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+</div>
+
+<footer>
+  <p>© 2026 FreeInsuranceIQ · <a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms of Use</a></p>
+  <p style="margin-top:8px; font-size:0.78rem;">Results are estimates only and do not constitute insurance advice. Consult a licensed insurance professional for personalized guidance.</p>
+  <p style="margin-top:8px; font-size:0.78rem;">FreeInsuranceIQ is an independent educational tool. We are not affiliated with any insurance company, broker, or agent.</p>
+</footer>
+
+</body>
+</html>

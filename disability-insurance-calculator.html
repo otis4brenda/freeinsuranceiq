@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Disability Insurance Calculator — How Much Coverage Do I Need? 2026 | FreeInsuranceIQ</title>
+  <meta name="description" content="Find out how much disability insurance you need in 2026. See your income gap, how long savings would last, and what monthly benefit to buy. Free, no email required." />
+  <link rel="canonical" href="https://freeinsuranceiq.com/disability-insurance-calculator.html" />
+  <!-- GA4: TBD -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "WebApplication", "name": "Disability Insurance Calculator", "url": "https://freeinsuranceiq.com/disability-insurance-calculator.html", "description": "Estimate disability income insurance needs based on monthly income, expenses, and savings.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --primary: #0f9e6e; --primary-dark: #0b7a55; --accent: #f59e0b; --bg: #f3f9f7; --card: #ffffff; --text: #1a2e25; --muted: #6b7280; --border: #d1e8df; --radius: 12px; --shadow: 0 2px 16px rgba(15,158,110,0.08); }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .page-hero { background: linear-gradient(135deg, #0f9e6e 0%, #0b7a55 100%); color: white; text-align: center; padding: 44px 24px 36px; }
+    .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; }
+    .page-hero p { font-size: 1rem; opacity: 0.9; max-width: 520px; margin: 0 auto; }
+    .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
+    .calc-panel { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
+    .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
+    .calc-panel .subtitle { color: var(--muted); font-size: 0.88rem; margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; }
+    .form-group input, .form-group select { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); background: var(--bg); transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary); background: white; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+    .calc-btn:hover { background: var(--primary-dark); }
+    .result-box { background: linear-gradient(135deg, #f0fdf8, #fef9ec); border: 1px solid #a7f3d0; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box.show { display: block; }
+    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+    .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
+    .result-item .value { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+    .alert-item .value { color: #dc2626; }
+    .quick-answer { background: #f0fdf8; border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 6px; font-size: 0.95rem; margin-bottom: 22px; line-height: 1.6; }
+    .content-section { margin-bottom: 32px; }
+    .content-section h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
+    .content-section p { font-size: 0.93rem; line-height: 1.7; color: #374151; margin-bottom: 14px; }
+    .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { width: 100%; background: var(--card); border: none; padding: 16px 20px; font-size: 0.95rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--text); }
+    .faq-q:hover { background: #f9fffe; }
+    .faq-q .arrow { transition: transform 0.2s; font-size: 0.8rem; color: var(--muted); }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s; font-size: 0.9rem; line-height: 1.65; color: #374151; background: #fafffe; }
+    .faq-a.open { max-height: 300px; padding: 14px 20px 18px; }
+    .adsbygoogle { display: block; margin: 28px auto; max-width: 728px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-size: 0.88rem; font-weight: 600; text-decoration: none; margin-bottom: 20px; }
+    .back-link:hover { text-decoration: underline; }
+    footer { background: var(--text); color: #9ca3af; text-align: center; padding: 28px 24px; font-size: 0.85rem; margin-top: 48px; }
+    footer a { color: #9ca3af; text-decoration: none; }
+    footer a:hover { color: white; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">FreeInsurance<span>IQ</span></a>
+  <div class="nav-links">
+    <a href="life-insurance-calculator.html">Life</a>
+    <a href="auto-insurance-calculator.html">Auto</a>
+    <a href="home-insurance-calculator.html">Home</a>
+    <a href="health-insurance-subsidy-calculator.html">Health</a>
+    <a href="renters-insurance-calculator.html">Renters</a>
+    <a href="disability-insurance-calculator.html">Disability</a>
+    <a href="long-term-care-cost-calculator.html">LTC</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+<div class="page-hero">
+  <h1>🩺 Disability Insurance Calculator</h1>
+  <p>What would happen to your finances if you couldn't work for 6 months? Find out — and find the gap.</p>
+</div>
+<div class="container">
+  <a class="back-link" href="/">← All Calculators</a>
+  <div class="calc-panel">
+    <h2>Disability Income Insurance Needs Calculator</h2>
+    <p class="subtitle">See how long your savings would last, your monthly income gap, and how much disability coverage to buy. · Updated June 2026</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Monthly Take-Home Income ($)</label>
+        <input type="number" id="di-income" value="5000" placeholder="e.g. 5000" />
+      </div>
+      <div class="form-group">
+        <label>Monthly Essential Expenses ($) <small style="font-weight:400;color:var(--muted)">(housing, food, utilities, debt)</small></label>
+        <input type="number" id="di-expenses" value="3500" placeholder="e.g. 3500" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Emergency Savings ($)</label>
+        <input type="number" id="di-savings" value="10000" placeholder="e.g. 10000" />
+      </div>
+      <div class="form-group">
+        <label>Employer Disability Coverage</label>
+        <select id="di-employer">
+          <option value="0">None</option>
+          <option value="0.4">Short-term only (40% income replacement)</option>
+          <option value="0.6">Long-term (60% income replacement)</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Desired Coverage Period</label>
+      <select id="di-period">
+        <option value="24">2 years</option>
+        <option value="60" selected>5 years</option>
+        <option value="120">10 years</option>
+        <option value="300">To age 65 (approx. 25 yrs)</option>
+      </select>
+    </div>
+    <button class="calc-btn" onclick="calcDisability()">Calculate My Coverage Gap</button>
+    <div id="disability-result" class="result-box">
+      <div class="result-main" id="di-benefit"></div>
+      <div class="result-label">Recommended Monthly Disability Benefit</div>
+      <div class="result-breakdown">
+        <div class="result-item"><div class="label">Monthly Income Gap</div><div class="value" id="di-gap"></div></div>
+        <div class="result-item result-item" id="di-savings-item"><div class="label">Savings Runway</div><div class="value" id="di-runway"></div></div>
+        <div class="result-item"><div class="label">Total Coverage Needed</div><div class="value" id="di-total"></div></div>
+        <div class="result-item"><div class="label">Est. Monthly Premium</div><div class="value" id="di-premium"></div></div>
+      </div>
+      <p id="di-note" style="margin-top:16px; font-size:0.88rem; color:#374151; line-height:1.6;"></p>
+    </div>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="content-section">
+    <p class="quick-answer">A 35-year-old worker has a 1-in-4 chance of becoming disabled before retirement age. Yet 65% of Americans have no disability insurance beyond Social Security Disability Insurance (SSDI) — which takes 3–6 months to qualify for, pays an average of only $1,537/month, and denies 67% of initial applications. Disability insurance replaces 60–80% of your income while you're unable to work, protecting the financial foundation most people never insure.</p>
+
+    <h3>Why Disability Is Your Most Valuable Asset to Protect</h3>
+    <p>Your ability to earn income is likely your greatest financial asset — worth millions of dollars over a career. A 35-year-old earning $70,000 per year has approximately $2.1 million in future earning potential over the next 30 years. Yet most people insure their car and home without protecting the income that pays for everything. The odds are sobering: the Social Security Administration estimates that 25% of 20-year-olds will experience a disability lasting 90 days or more before they reach retirement age. The most common causes aren't the dramatic accidents people imagine — they're cancer, heart disease, back injuries, and mental health conditions that make sustained work impossible.</p>
+
+    <h3>Short-Term vs. Long-Term Disability Insurance: What's the Difference?</h3>
+    <p>Short-term disability (STD) insurance kicks in quickly — typically within 0–14 days — and covers 60–80% of income for 3–6 months. Long-term disability (LTD) insurance begins after the elimination period (usually 90 days) and can pay benefits until age 65 for permanent disabilities. The smartest strategy: use your emergency fund (3–6 months of expenses) to bridge the short-term gap, then rely on long-term disability insurance for extended disabilities. Many employers offer group LTD coverage at 60% of salary, which is a good start but often insufficient — especially for higher earners whose standard of living exceeds 60% of gross income after taxes.</p>
+
+    <h3>How to Choose the Right Elimination Period</h3>
+    <p>The elimination period is the waiting period before your disability benefits begin — typically 30, 60, 90, or 180 days. Choosing a longer elimination period significantly lowers your premium: moving from a 60-day to a 90-day elimination period typically saves 10–15%. Moving to 180 days saves 20–30%. The right choice depends on how much you have in emergency savings. If you have 6 months of expenses saved, a 180-day elimination period makes economic sense. If you have less than 3 months saved, stick with a 60 or 90-day period to avoid a dangerous financial gap.</p>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What does disability insurance actually pay? <span class="arrow">▼</span></button>
+      <div class="faq-a">Disability insurance replaces a portion of your income — typically 60–80% — when an illness or injury prevents you from working. Benefits are paid monthly after the elimination period and continue for the benefit period (2 years, 5 years, 10 years, or to age 65 depending on your policy). Benefits are generally tax-free if you paid premiums with after-tax dollars, meaning a 60% replacement rate often provides close to 80–90% of your take-home pay after taxes.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Can I rely on Social Security Disability Insurance (SSDI)? <span class="arrow">▼</span></button>
+      <div class="faq-a">SSDI is an important safety net but should not be your primary plan. The average processing time for an initial SSDI decision is 6 months — 3–5 months in queue plus months of review. SSDI denies 67% of initial applications. Even if approved, the average benefit is only $1,537/month. For most working Americans, SSDI alone cannot replace the income needed to maintain their family's standard of living during a disability.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How much does disability insurance cost? <span class="arrow">▼</span></button>
+      <div class="faq-a">Individual long-term disability insurance typically costs 1–3% of your annual income. A 35-year-old earning $70,000 could expect to pay $700–$2,100/year ($58–$175/month) for a robust individual policy with a 90-day elimination period and coverage to age 65. Group policies through employers are usually cheaper but less portable and may have income caps. Self-employed workers should prioritize individual disability insurance since they have no employer backup.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What's the difference between "own occupation" and "any occupation" disability coverage? <span class="arrow">▼</span></button>
+      <div class="faq-a">"Own occupation" coverage pays if you can't work in your specific occupation — a surgeon with a hand injury collects benefits even if they could technically work as a teacher. "Any occupation" only pays if you're unable to work in any job for which you're reasonably qualified by education and experience. Own-occupation is more comprehensive (and more expensive) and is especially important for professionals whose income depends on a specific skill set. Most employer group plans are any-occupation after 24 months; individual policies offer own-occupation more easily.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Does disability insurance cover mental health conditions? <span class="arrow">▼</span></button>
+      <div class="faq-a">Most disability policies cover mental health conditions, including depression, anxiety, PTSD, and burnout-related conditions. However, many policies impose a 24-month maximum benefit for mental/nervous conditions — meaning if your disability stems solely from a mental health diagnosis, benefits may stop after 2 years even if your policy has a longer benefit period. Physical disabilities caused by mental health conditions (like chronic fatigue syndrome) may be treated differently. Review your policy language carefully and ask specifically about mental health limitations before purchasing.</div>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>© 2026 FreeInsuranceIQ · <a href="/">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+  <p style="margin-top:8px; font-size:0.78rem;">Estimates only. Not insurance advice. Consult a licensed insurance professional.</p>
+</footer>
+<script>
+  function calcDisability() {
+    const income    = +document.getElementById('di-income').value || 5000;
+    const expenses  = +document.getElementById('di-expenses').value || 3500;
+    const savings   = +document.getElementById('di-savings').value || 0;
+    const empRate   = +document.getElementById('di-employer').value || 0;
+    const period    = +document.getElementById('di-period').value || 60;
+
+    const employerBenefit = income * empRate;
+    const gap = Math.max(0, expenses - employerBenefit);
+    const runway = savings > 0 ? (savings / Math.max(1, gap)).toFixed(1) : '0';
+    const totalCoverage = gap * period;
+    // Rough premium estimate: ~1.8% of annual income for solid LTD
+    const annualPremium = income * 12 * 0.018;
+    const monthlyPremium = (annualPremium / 12).toFixed(0);
+
+    document.getElementById('di-benefit').textContent = '$' + Math.round(gap).toLocaleString() + '/mo';
+    document.getElementById('di-gap').textContent = '$' + Math.round(gap).toLocaleString() + '/mo';
+    document.getElementById('di-runway').textContent = runway + ' months';
+    document.getElementById('di-total').textContent = '$' + Math.round(totalCoverage).toLocaleString();
+    document.getElementById('di-premium').textContent = '~$' + monthlyPremium + '/mo';
+
+    let note = '';
+    const runwayNum = parseFloat(runway);
+    if (runwayNum < 3) {
+      note = '🔴 With less than 3 months of savings runway, you need disability coverage urgently. A disability as short as 90 days could put you in serious financial jeopardy. Prioritize a policy with a 60-day elimination period.';
+    } else if (runwayNum < 6) {
+      note = '⚠️ Your savings would cover ' + runway + ' months without income. A 90-day elimination period is likely sufficient. Focus on long-term disability coverage for extended disabilities.';
+    } else {
+      note = '✅ Your savings provide a good runway of ' + runway + ' months. Consider a 180-day elimination period to lower your premium while still protecting against long-term disability.';
+    }
+    document.getElementById('di-note').textContent = note;
+    document.getElementById('disability-result').classList.add('show');
+  }
+
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+  }
+</script>
+</body>
+</html>

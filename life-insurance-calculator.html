@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Life Insurance Calculator — How Much Life Insurance Do I Need? | FreeInsuranceIQ</title>
+  <meta name="description" content="Find out exactly how much life insurance you need in 2026. Free calculator based on your income, debts, dependents, and existing coverage. No email required." />
+  <link rel="canonical" href="https://freeinsuranceiq.com/life-insurance-calculator.html" />
+  <!-- GA4: TBD -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Life Insurance Calculator",
+    "url": "https://freeinsuranceiq.com/life-insurance-calculator.html",
+    "description": "Free calculator to determine how much life insurance coverage you need based on income, debts, dependents, and existing policies.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --primary: #0f9e6e; --primary-dark: #0b7a55; --accent: #f59e0b;
+      --bg: #f3f9f7; --card: #ffffff; --text: #1a2e25; --muted: #6b7280;
+      --border: #d1e8df; --radius: 12px; --shadow: 0 2px 16px rgba(15,158,110,0.08);
+    }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    nav {
+      background: var(--card); border-bottom: 1px solid var(--border);
+      padding: 0 24px; height: 60px; display: flex; align-items: center;
+      justify-content: space-between; position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+    }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .page-hero {
+      background: linear-gradient(135deg, #0f9e6e 0%, #0b7a55 100%);
+      color: white; text-align: center; padding: 44px 24px 36px;
+    }
+    .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; }
+    .page-hero p { font-size: 1rem; opacity: 0.9; max-width: 520px; margin: 0 auto; }
+    .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
+    .calc-panel {
+      background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
+      padding: 32px; margin-bottom: 28px; border: 1px solid var(--border);
+    }
+    .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
+    .calc-panel .subtitle { color: var(--muted); font-size: 0.88rem; margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; }
+    .form-group input, .form-group select {
+      width: 100%; padding: 11px 14px; border: 1px solid var(--border);
+      border-radius: 8px; font-size: 1rem; color: var(--text); background: var(--bg); transition: border-color 0.2s;
+    }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary); background: white; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .calc-btn {
+      width: 100%; background: var(--primary); color: white; border: none;
+      border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700;
+      cursor: pointer; margin-top: 8px; transition: background 0.2s;
+    }
+    .calc-btn:hover { background: var(--primary-dark); }
+    .result-box {
+      background: linear-gradient(135deg, #f0fdf8, #fef9ec);
+      border: 1px solid #a7f3d0; border-radius: var(--radius);
+      padding: 24px; margin-top: 24px; display: none;
+    }
+    .result-box.show { display: block; }
+    .result-main { font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+    .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
+    .result-item .value { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+    .quick-answer {
+      background: #f0fdf8; border-left: 4px solid var(--primary);
+      padding: 14px 18px; border-radius: 6px; font-size: 0.95rem;
+      margin-bottom: 22px; line-height: 1.6; color: var(--text);
+    }
+    .content-section { margin-bottom: 32px; }
+    .content-section h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; color: var(--text); }
+    .content-section p { font-size: 0.93rem; line-height: 1.7; color: #374151; margin-bottom: 14px; }
+    .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q {
+      width: 100%; background: var(--card); border: none; padding: 16px 20px;
+      font-size: 0.95rem; font-weight: 600; text-align: left; cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center; color: var(--text);
+    }
+    .faq-q:hover { background: #f9fffe; }
+    .faq-q .arrow { transition: transform 0.2s; font-size: 0.8rem; color: var(--muted); }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s; font-size: 0.9rem; line-height: 1.65; color: #374151; background: #fafffe; }
+    .faq-a.open { max-height: 300px; padding: 14px 20px 18px; }
+    .adsbygoogle { display: block; margin: 28px auto; max-width: 728px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-size: 0.88rem; font-weight: 600; text-decoration: none; margin-bottom: 20px; }
+    .back-link:hover { text-decoration: underline; }
+    footer { background: var(--text); color: #9ca3af; text-align: center; padding: 28px 24px; font-size: 0.85rem; margin-top: 48px; }
+    footer a { color: #9ca3af; text-decoration: none; }
+    footer a:hover { color: white; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="/">FreeInsurance<span>IQ</span></a>
+  <div class="nav-links">
+    <a href="life-insurance-calculator.html">Life</a>
+    <a href="auto-insurance-calculator.html">Auto</a>
+    <a href="home-insurance-calculator.html">Home</a>
+    <a href="health-insurance-subsidy-calculator.html">Health</a>
+    <a href="renters-insurance-calculator.html">Renters</a>
+    <a href="disability-insurance-calculator.html">Disability</a>
+    <a href="long-term-care-cost-calculator.html">LTC</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <h1>🛡️ Life Insurance Calculator</h1>
+  <p>How much life insurance do you actually need? Get your number in 60 seconds.</p>
+</div>
+
+<div class="container">
+  <a class="back-link" href="/">← All Calculators</a>
+
+  <div class="calc-panel">
+    <h2>Life Insurance Coverage Calculator</h2>
+    <p class="subtitle">Enter your financial details below. All calculations stay in your browser — nothing is sent or stored. · Updated June 2026</p>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Annual Income ($)</label>
+        <input type="number" id="li-income" value="75000" placeholder="e.g. 75000" />
+      </div>
+      <div class="form-group">
+        <label>Years of Income to Replace</label>
+        <input type="number" id="li-years" value="10" placeholder="e.g. 10" min="1" max="40" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Outstanding Debts ($) <small style="font-weight:400;color:var(--muted)">(mortgage, loans, credit cards)</small></label>
+        <input type="number" id="li-debt" value="200000" placeholder="e.g. 200000" />
+      </div>
+      <div class="form-group">
+        <label>Final Expenses Estimate ($) <small style="font-weight:400;color:var(--muted)">(funeral, estate)</small></label>
+        <input type="number" id="li-final" value="15000" placeholder="e.g. 15000" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Children's Education Fund ($) <small style="font-weight:400;color:var(--muted)">(per child, total)</small></label>
+        <input type="number" id="li-edu" value="50000" placeholder="e.g. 50000" />
+      </div>
+      <div class="form-group">
+        <label>Existing Life Insurance Coverage ($)</label>
+        <input type="number" id="li-existing" value="0" placeholder="e.g. 50000" />
+      </div>
+    </div>
+
+    <button class="calc-btn" onclick="calcLife()">Calculate My Coverage Need</button>
+
+    <div id="life-result" class="result-box">
+      <div class="result-main" id="li-total"></div>
+      <div class="result-label">Recommended Life Insurance Coverage</div>
+      <div class="result-breakdown">
+        <div class="result-item"><div class="label">Income Replacement</div><div class="value" id="li-inc-out"></div></div>
+        <div class="result-item"><div class="label">Debt Payoff</div><div class="value" id="li-debt-out"></div></div>
+        <div class="result-item"><div class="label">Final + Education</div><div class="value" id="li-other-out"></div></div>
+        <div class="result-item"><div class="label">Less Existing Coverage</div><div class="value" id="li-existing-out"></div></div>
+      </div>
+      <p id="li-advice" style="margin-top:16px; font-size:0.88rem; color:#374151; line-height:1.6;"></p>
+    </div>
+  </div>
+
+  <!-- AdSense -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="content-section">
+    <p class="quick-answer">Most financial experts recommend life insurance coverage equal to 10–12 times your annual income, plus outstanding debts and final expenses. For a household earning $75,000 per year with a $200,000 mortgage and two children, that typically means $1 million or more in coverage — far more than most people currently carry.</p>
+
+    <h3>How Much Life Insurance Do You Really Need in 2026?</h3>
+    <p>The most widely used method for calculating life insurance needs is the DIME formula: Debts, Income replacement, Mortgage payoff, and Education funding. Add those four numbers together, subtract any existing coverage, and you have a solid starting estimate. In 2026, with the average American carrying $104,215 in debt and the median home price above $400,000, most families need substantially more coverage than they realize. Term life insurance remains the most affordable way to cover these needs — a healthy 35-year-old can typically secure $500,000 in 20-year term coverage for under $30 per month.</p>
+
+    <h3>Why 44% of Americans Are Dangerously Underinsured</h3>
+    <p>According to LIMRA's 2025 Insurance Barometer Study, 44% of Millennials overestimate the cost of life insurance by 3 times or more. This misconception is the single biggest reason families are left unprotected. Many people assume life insurance costs hundreds per month when a healthy non-smoker in their 30s can secure substantial coverage for less than the cost of a streaming subscription. The other major barrier is complexity — policies, riders, and benefit structures are confusing, which is why independent calculators like this one exist: to cut through the noise and give you a plain-language number.</p>
+
+    <h3>Term Life vs. Whole Life: Which Is Right for You?</h3>
+    <p>For most families focused on income protection, term life insurance is the smart choice. It provides maximum coverage at minimum cost for a defined period — typically 10, 20, or 30 years — which is exactly when your dependents are most financially vulnerable. Whole life insurance builds cash value over time but costs 5–15 times more for the same death benefit. Financial planners frequently recommend the "buy term and invest the difference" strategy for households under 50. If you're unsure, our <a href="term-vs-whole-life-calculator.html" style="color:var(--primary)">Term vs. Whole Life Comparison Tool</a> shows the 20-year cost difference side by side.</p>
+  </div>
+
+  <!-- AdSense -->
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How much life insurance does the average American need? <span class="arrow">▼</span></button>
+      <div class="faq-a">The average American family needs between $500,000 and $1.5 million in life insurance coverage. A quick estimate: multiply your annual income by 10, then add your total debt and final expenses. For a $70,000 income with $250,000 in debt, that's roughly $950,000 in recommended coverage.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What is the cheapest way to get life insurance in 2026? <span class="arrow">▼</span></button>
+      <div class="faq-a">Term life insurance is the most affordable option by far. A healthy non-smoking 30-year-old can get $500,000 in 20-year term coverage for $18–$28 per month. Rates increase with age, so the best time to lock in coverage is now — waiting 5 years can cost 50–100% more in monthly premiums.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Does life insurance cover death by any cause? <span class="arrow">▼</span></button>
+      <div class="faq-a">Most term and whole life policies cover death from any cause — illness, accident, natural causes — after the contestability period (typically 2 years). Common exclusions include suicide in the first two years and deaths caused by certain excluded activities listed in the policy. Always read the exclusions section carefully before purchasing.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Do I need life insurance if I have no dependents? <span class="arrow">▼</span></button>
+      <div class="faq-a">If no one depends on your income, life insurance is less critical — but still worth considering for final expenses, co-signed debt, or future family plans. A small policy ($25,000–$50,000) can prevent your family from bearing funeral costs averaging $8,300–$12,000 in 2026. If you plan to have dependents within 10 years, locking in rates now while young and healthy saves significantly.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How often should I review my life insurance coverage? <span class="arrow">▼</span></button>
+      <div class="faq-a">Review your life insurance coverage after any major life event: marriage, divorce, having a child, buying a home, or a significant income change. As a rule of thumb, review every 3–5 years even without major changes. Many people find their employer-provided coverage (typically 1–2x salary) is far below what their family actually needs.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 FreeInsuranceIQ · <a href="/">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+  <p style="margin-top:8px; font-size:0.78rem;">Results are estimates only. Not insurance advice. Consult a licensed insurance professional.</p>
+</footer>
+
+<script>
+  const fmt = n => '$' + Math.round(n).toLocaleString();
+
+  function calcLife() {
+    const income   = +document.getElementById('li-income').value || 0;
+    const years    = +document.getElementById('li-years').value || 10;
+    const debt     = +document.getElementById('li-debt').value || 0;
+    const final_   = +document.getElementById('li-final').value || 0;
+    const edu      = +document.getElementById('li-edu').value || 0;
+    const existing = +document.getElementById('li-existing').value || 0;
+
+    const incomeReplace = income * years;
+    const otherNeeds    = final_ + edu;
+    const grossNeed     = incomeReplace + debt + otherNeeds;
+    const netNeed       = Math.max(0, grossNeed - existing);
+
+    document.getElementById('li-total').textContent = fmt(netNeed);
+    document.getElementById('li-inc-out').textContent = fmt(incomeReplace);
+    document.getElementById('li-debt-out').textContent = fmt(debt);
+    document.getElementById('li-other-out').textContent = fmt(otherNeeds);
+    document.getElementById('li-existing-out').textContent = '-' + fmt(existing);
+
+    let advice = '';
+    if (netNeed === 0) {
+      advice = '✅ Great news — your existing coverage appears sufficient based on these inputs. Review periodically as your situation changes.';
+    } else if (netNeed < 250000) {
+      advice = `💡 A term life policy of ${fmt(netNeed)} is very affordable. A healthy 35-year-old can typically secure this coverage for under $15/month.`;
+    } else if (netNeed < 750000) {
+      advice = `💡 A 20-year term policy of ${fmt(netNeed)} is the most cost-effective solution for most families. Estimated cost: $20–$50/month for healthy adults under 45.`;
+    } else {
+      advice = `💡 Coverage of ${fmt(netNeed)} is a large but achievable amount via term life insurance. Shop multiple carriers — rates vary significantly. Consider a 20 or 30-year term based on your youngest dependent's age.`;
+    }
+    document.getElementById('li-advice').textContent = advice;
+    document.getElementById('life-result').classList.add('show');
+  }
+
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+  }
+</script>
+</body>
+</html>

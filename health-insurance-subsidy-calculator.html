@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Insurance Subsidy Calculator — ACA Marketplace 2026 | FreeInsuranceIQ</title>
+  <meta name="description" content="Estimate your ACA health insurance subsidy for 2026. Find out how much you'll actually pay per month on the marketplace based on income and household size. Free, no email needed." />
+  <link rel="canonical" href="https://freeinsuranceiq.com/health-insurance-subsidy-calculator.html" />
+  <!-- GA4: TBD -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "WebApplication", "name": "Health Insurance Subsidy Calculator", "url": "https://freeinsuranceiq.com/health-insurance-subsidy-calculator.html", "description": "Estimate ACA marketplace premium tax credits and monthly health insurance costs for 2026.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --primary: #0f9e6e; --primary-dark: #0b7a55; --accent: #f59e0b; --bg: #f3f9f7; --card: #ffffff; --text: #1a2e25; --muted: #6b7280; --border: #d1e8df; --radius: 12px; --shadow: 0 2px 16px rgba(15,158,110,0.08); }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .page-hero { background: linear-gradient(135deg, #0f9e6e 0%, #0b7a55 100%); color: white; text-align: center; padding: 44px 24px 36px; }
+    .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; }
+    .page-hero p { font-size: 1rem; opacity: 0.9; max-width: 520px; margin: 0 auto; }
+    .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
+    .calc-panel { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
+    .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
+    .calc-panel .subtitle { color: var(--muted); font-size: 0.88rem; margin-bottom: 24px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; }
+    .form-group input, .form-group select { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); background: var(--bg); transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary); background: white; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+    .calc-btn:hover { background: var(--primary-dark); }
+    .result-box { background: linear-gradient(135deg, #f0fdf8, #fef9ec); border: 1px solid #a7f3d0; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box.show { display: block; }
+    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+    .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
+    .result-item .value { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+    .quick-answer { background: #f0fdf8; border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 6px; font-size: 0.95rem; margin-bottom: 22px; line-height: 1.6; }
+    .content-section { margin-bottom: 32px; }
+    .content-section h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
+    .content-section p { font-size: 0.93rem; line-height: 1.7; color: #374151; margin-bottom: 14px; }
+    .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { width: 100%; background: var(--card); border: none; padding: 16px 20px; font-size: 0.95rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--text); }
+    .faq-q:hover { background: #f9fffe; }
+    .faq-q .arrow { transition: transform 0.2s; font-size: 0.8rem; color: var(--muted); }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s; font-size: 0.9rem; line-height: 1.65; color: #374151; background: #fafffe; }
+    .faq-a.open { max-height: 300px; padding: 14px 20px 18px; }
+    .adsbygoogle { display: block; margin: 28px auto; max-width: 728px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-size: 0.88rem; font-weight: 600; text-decoration: none; margin-bottom: 20px; }
+    .back-link:hover { text-decoration: underline; }
+    footer { background: var(--text); color: #9ca3af; text-align: center; padding: 28px 24px; font-size: 0.85rem; margin-top: 48px; }
+    footer a { color: #9ca3af; text-decoration: none; }
+    footer a:hover { color: white; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">FreeInsurance<span>IQ</span></a>
+  <div class="nav-links">
+    <a href="life-insurance-calculator.html">Life</a>
+    <a href="auto-insurance-calculator.html">Auto</a>
+    <a href="home-insurance-calculator.html">Home</a>
+    <a href="health-insurance-subsidy-calculator.html">Health</a>
+    <a href="renters-insurance-calculator.html">Renters</a>
+    <a href="disability-insurance-calculator.html">Disability</a>
+    <a href="long-term-care-cost-calculator.html">LTC</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+<div class="page-hero">
+  <h1>🏥 Health Insurance Subsidy Calculator</h1>
+  <p>Find out how much the government will help pay for your health insurance in 2026 — plain and simple.</p>
+</div>
+<div class="container">
+  <a class="back-link" href="/">← All Calculators</a>
+  <div class="calc-panel">
+    <h2>ACA Marketplace Subsidy Estimator</h2>
+    <p class="subtitle">Uses 2026 Federal Poverty Level guidelines. Results are estimates — visit healthcare.gov for exact figures and enrollment. · Updated June 2026</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Household Size</label>
+        <select id="hs-size">
+          <option value="1">1 person</option>
+          <option value="2">2 people</option>
+          <option value="3">3 people</option>
+          <option value="4" selected>4 people</option>
+          <option value="5">5 people</option>
+          <option value="6">6 people</option>
+          <option value="7">7 people</option>
+          <option value="8">8 people</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Annual Household Income ($)</label>
+        <input type="number" id="hs-income" value="55000" placeholder="e.g. 55000" />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Age of Primary Insured</label>
+        <input type="number" id="hs-age" value="40" min="18" max="64" placeholder="e.g. 40" />
+      </div>
+      <div class="form-group">
+        <label>Plan Type (Silver is used for subsidy calculation)</label>
+        <select id="hs-plan">
+          <option value="bronze">Bronze (lower premium, higher deductible)</option>
+          <option value="silver" selected>Silver (benchmark for subsidies)</option>
+          <option value="gold">Gold (higher premium, lower deductible)</option>
+        </select>
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcHealth()">Estimate My Subsidy</button>
+    <div id="health-result" class="result-box">
+      <div class="result-main" id="hs-subsidy"></div>
+      <div class="result-label">Estimated Monthly Premium Tax Credit (Subsidy)</div>
+      <div class="result-breakdown">
+        <div class="result-item"><div class="label">Your Net Monthly Premium</div><div class="value" id="hs-net"></div></div>
+        <div class="result-item"><div class="label">% of Federal Poverty Level</div><div class="value" id="hs-fpl"></div></div>
+        <div class="result-item"><div class="label">Full Benchmark Premium</div><div class="value" id="hs-full"></div></div>
+        <div class="result-item"><div class="label">Annual Subsidy Value</div><div class="value" id="hs-annual"></div></div>
+      </div>
+      <p id="hs-note" style="margin-top:16px; font-size:0.88rem; color:#374151; line-height:1.6;"></p>
+    </div>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="content-section">
+    <p class="quick-answer">In 2026, ACA marketplace subsidies (premium tax credits) are available to households earning between 100% and 400% of the Federal Poverty Level. For a family of 4, that's $32,150 to $128,600 in annual income. Enhanced subsidies introduced since 2021 mean millions of Americans qualify for $0 or very low-cost plans. Visit healthcare.gov during open enrollment (Nov 1–Jan 15) to see exact options in your area.</p>
+
+    <h3>How the ACA Premium Tax Credit Works in 2026</h3>
+    <p>The Affordable Care Act's premium tax credit caps what you pay for a Silver plan at a percentage of your income based on where you fall in the Federal Poverty Level (FPL) scale. For 2026, if your income is 150% FPL or below, your required contribution is $0 — the entire benchmark premium is covered. At 200% FPL, you pay roughly 2% of income. At 300% FPL, you pay about 6%. At 400% FPL, you pay approximately 8.5%. If your income exceeds 400% FPL, enhanced subsidies enacted in recent legislation may still reduce your costs depending on the plan premium in your area.</p>
+
+    <h3>Silver Plans and the Benchmark Premium</h3>
+    <p>The subsidy is calculated based on the second-lowest-cost Silver plan in your area — called the benchmark plan. You can apply the tax credit to any metal tier (Bronze, Silver, Gold, Platinum), but the credit amount is fixed based on the Silver benchmark. If you choose a Bronze plan (which typically costs less than the benchmark), you'll pay even less than the calculator shows. Silver plans come with an extra benefit for those under 250% FPL: cost-sharing reductions (CSR) that lower deductibles and out-of-pocket maximums, making Silver an exceptional value at lower incomes.</p>
+
+    <h3>What Counts as Income for ACA Subsidy Purposes?</h3>
+    <p>ACA subsidies are based on Modified Adjusted Gross Income (MAGI), which includes wages, self-employment income, Social Security benefits, alimony, capital gains, and most other income sources. It does not include child support received, supplemental security income, or most gifts and inheritances. If you're self-employed, include your net profit after business deductions. Importantly, if your income changes during the year, you should update your marketplace application — overstated subsidies must be repaid at tax time, while understated subsidies result in a refund.</p>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">When can I enroll in ACA marketplace health insurance? <span class="arrow">▼</span></button>
+      <div class="faq-a">Open enrollment for ACA marketplace plans runs November 1 through January 15 each year, with coverage starting January 1 (or February 1 for enrollments after December 15). Outside of open enrollment, you can enroll during a Special Enrollment Period (SEP) triggered by qualifying life events: losing job-based coverage, getting married, having a baby, moving to a new state, or significant income changes.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What if my income is below 100% of the Federal Poverty Level? <span class="arrow">▼</span></button>
+      <div class="faq-a">If your income falls below 100% FPL, you generally don't qualify for ACA marketplace subsidies — but you likely qualify for Medicaid, which provides free or very low-cost coverage. However, if you live in a state that has NOT expanded Medicaid, there may be a coverage gap. In those states, contact your state Medicaid office and a local navigator or broker to understand your options.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Can I get subsidies if my employer offers health insurance? <span class="arrow">▼</span></button>
+      <div class="faq-a">You can only get marketplace subsidies if your employer coverage is considered "unaffordable" or doesn't meet minimum value standards. Coverage is unaffordable if the employee-only premium costs more than 9.02% of your household income in 2026. If employer coverage meets both affordability and minimum value tests, you're generally not eligible for marketplace subsidies, even if family coverage is expensive.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What's the difference between Bronze, Silver, Gold, and Platinum plans? <span class="arrow">▼</span></button>
+      <div class="faq-a">All metal tiers cover the same essential health benefits — the difference is how costs are split. Bronze plans have the lowest monthly premium but highest deductible (average $6,000+). Silver plans are mid-tier and the only tier that offers cost-sharing reductions for lower incomes. Gold plans have higher premiums but lower deductibles. Platinum has the highest premiums but covers 90% of costs. For those under 250% FPL, Silver's CSR benefit often makes it the best value.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What happens if I underestimate my income and get too large a subsidy? <span class="arrow">▼</span></button>
+      <div class="faq-a">If you receive more advance premium tax credit than you're entitled to, you must repay the excess when you file your taxes. Repayment is capped based on income — households under 200% FPL are capped at $350–$700 in repayment, while those above 400% FPL repay the full difference with no cap. To avoid surprises, update your marketplace application whenever your income changes significantly during the year.</div>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>© 2026 FreeInsuranceIQ · <a href="/">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+  <p style="margin-top:8px; font-size:0.78rem;">Estimates only. For accurate subsidy information and enrollment, visit healthcare.gov. Not affiliated with any government agency or insurer.</p>
+</footer>
+<script>
+  // 2026 FPL baselines (48 contiguous states)
+  const FPL_BASE = { 1:15650, 2:21150, 3:26650, 4:32150, 5:37650, 6:43150, 7:48650, 8:54150 };
+  // Required contribution % by FPL band (2026 ARP-enhanced)
+  function getContribPct(fplPct) {
+    if (fplPct <= 1.0) return 0;
+    if (fplPct <= 1.33) return 0;
+    if (fplPct <= 1.5)  return 0.00;
+    if (fplPct <= 2.0)  return 0.02;
+    if (fplPct <= 2.5)  return 0.04;
+    if (fplPct <= 3.0)  return 0.06;
+    if (fplPct <= 4.0)  return 0.085;
+    return 0.085; // Extended enhanced subsidies
+  }
+  // Benchmark Silver premium estimate by age (national avg 2026)
+  function getBenchmarkPremium(age) {
+    if (age < 25) return 310;
+    if (age < 30) return 340;
+    if (age < 35) return 375;
+    if (age < 40) return 415;
+    if (age < 45) return 480;
+    if (age < 50) return 565;
+    if (age < 55) return 680;
+    if (age < 60) return 820;
+    return 950;
+  }
+
+  function calcHealth() {
+    const size   = +document.getElementById('hs-size').value;
+    const income = +document.getElementById('hs-income').value;
+    const age    = +document.getElementById('hs-age').value;
+    const plan   = document.getElementById('hs-plan').value;
+
+    const fpl100 = FPL_BASE[Math.min(size, 8)] || 54150;
+    const fplPct  = income / fpl100;
+    const benchmarkMonthly = getBenchmarkPremium(age);
+
+    // Plan adjustment
+    const planAdj = { bronze: 0.72, silver: 1.0, gold: 1.28 };
+    const fullPremium = benchmarkMonthly * planAdj[plan];
+
+    const contribPct = getContribPct(fplPct);
+    const maxContrib = (income * contribPct) / 12;
+    let netPremium, subsidy;
+
+    if (fplPct < 1.0) {
+      // Below 100% FPL — Medicaid territory
+      subsidy = 0;
+      netPremium = fullPremium;
+    } else if (fplPct > 4.0) {
+      // Enhanced ARP subsidies still cap at 8.5% of income above 400% FPL
+      const maxContrib400 = (income * 0.085) / 12;
+      subsidy = Math.max(0, fullPremium - maxContrib400);
+      netPremium = Math.max(0, fullPremium - subsidy);
+    } else {
+      subsidy = Math.max(0, fullPremium - maxContrib);
+      netPremium = Math.max(0, fullPremium - subsidy);
+    }
+
+    document.getElementById('hs-subsidy').textContent = '$' + Math.round(subsidy) + '/mo';
+    document.getElementById('hs-net').textContent = '$' + Math.round(netPremium) + '/mo';
+    document.getElementById('hs-fpl').textContent = (fplPct * 100).toFixed(0) + '% FPL';
+    document.getElementById('hs-full').textContent = '$' + Math.round(fullPremium) + '/mo';
+    document.getElementById('hs-annual').textContent = '$' + Math.round(subsidy * 12).toLocaleString() + '/yr';
+
+    let note = '';
+    if (fplPct < 1.0) {
+      note = '⚠️ Your income may fall below 100% FPL. You likely qualify for Medicaid — contact your state Medicaid office for free or very low-cost coverage.';
+    } else if (fplPct <= 1.5) {
+      note = '✅ At your income level, you may qualify for a $0 monthly premium Silver plan with significant cost-sharing reductions. Enroll at healthcare.gov during open enrollment.';
+    } else if (fplPct <= 2.5) {
+      note = '💡 You qualify for solid subsidy support. A Silver plan with CSR benefits is likely your best value at this income level — it has a lower deductible than the premium alone would suggest.';
+    } else if (fplPct <= 4.0) {
+      note = '💡 You qualify for ACA premium tax credits. Shop multiple plans — the subsidy applies regardless of which metal tier you choose.';
+    } else {
+      note = '💡 Above 400% FPL, enhanced subsidies may still help if benchmark premiums in your area are high. Visit healthcare.gov to see actual plan options and costs for your ZIP code.';
+    }
+    document.getElementById('hs-note').textContent = note;
+    document.getElementById('health-result').classList.add('show');
+  }
+
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+  }
+</script>
+</body>
+</html>

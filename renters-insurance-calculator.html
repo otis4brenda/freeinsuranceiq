@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Renters Insurance Calculator — How Much Do I Need? 2026 | FreeInsuranceIQ</title>
+  <meta name="description" content="Find out how much renters insurance you need and what it costs in 2026. Free calculator with guided property value estimator. No email required." />
+  <link rel="canonical" href="https://freeinsuranceiq.com/renters-insurance-calculator.html" />
+  <!-- GA4: TBD -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+  { "@context": "https://schema.org", "@type": "WebApplication", "name": "Renters Insurance Calculator", "url": "https://freeinsuranceiq.com/renters-insurance-calculator.html", "description": "Estimate personal property value and monthly renters insurance cost.", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --primary: #0f9e6e; --primary-dark: #0b7a55; --accent: #f59e0b; --bg: #f3f9f7; --card: #ffffff; --text: #1a2e25; --muted: #6b7280; --border: #d1e8df; --radius: 12px; --shadow: 0 2px 16px rgba(15,158,110,0.08); }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
+    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--primary); }
+    .page-hero { background: linear-gradient(135deg, #0f9e6e 0%, #0b7a55 100%); color: white; text-align: center; padding: 44px 24px 36px; }
+    .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; }
+    .page-hero p { font-size: 1rem; opacity: 0.9; max-width: 520px; margin: 0 auto; }
+    .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
+    .calc-panel { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
+    .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
+    .calc-panel .subtitle { color: var(--muted); font-size: 0.88rem; margin-bottom: 24px; }
+    .inventory-box { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 20px; }
+    .inventory-box h3 { font-size: 0.95rem; font-weight: 700; margin-bottom: 14px; color: var(--text); }
+    .inv-row { display: grid; grid-template-columns: 1fr 120px; gap: 10px; align-items: center; margin-bottom: 10px; }
+    .inv-row label { font-size: 0.88rem; color: var(--text); }
+    .inv-row input { padding: 8px 12px; border: 1px solid var(--border); border-radius: 7px; font-size: 0.95rem; background: white; width: 100%; }
+    .inv-total { font-size: 0.92rem; font-weight: 700; color: var(--primary); margin-top: 10px; }
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 0.88rem; font-weight: 600; margin-bottom: 6px; }
+    .form-group input, .form-group select { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text); background: var(--bg); transition: border-color 0.2s; }
+    .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary); background: white; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
+    .calc-btn:hover { background: var(--primary-dark); }
+    .result-box { background: linear-gradient(135deg, #f0fdf8, #fef9ec); border: 1px solid #a7f3d0; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box.show { display: block; }
+    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
+    .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
+    .result-item .value { font-size: 1.05rem; font-weight: 700; color: var(--text); }
+    .quick-answer { background: #f0fdf8; border-left: 4px solid var(--primary); padding: 14px 18px; border-radius: 6px; font-size: 0.95rem; margin-bottom: 22px; line-height: 1.6; }
+    .content-section { margin-bottom: 32px; }
+    .content-section h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; }
+    .content-section p { font-size: 0.93rem; line-height: 1.7; color: #374151; margin-bottom: 14px; }
+    .faq-section h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; }
+    .faq-item { border: 1px solid var(--border); border-radius: 10px; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { width: 100%; background: var(--card); border: none; padding: 16px 20px; font-size: 0.95rem; font-weight: 600; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; color: var(--text); }
+    .faq-q:hover { background: #f9fffe; }
+    .faq-q .arrow { transition: transform 0.2s; font-size: 0.8rem; color: var(--muted); }
+    .faq-q.open .arrow { transform: rotate(180deg); }
+    .faq-a { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s; font-size: 0.9rem; line-height: 1.65; color: #374151; background: #fafffe; }
+    .faq-a.open { max-height: 300px; padding: 14px 20px 18px; }
+    .adsbygoogle { display: block; margin: 28px auto; max-width: 728px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); font-size: 0.88rem; font-weight: 600; text-decoration: none; margin-bottom: 20px; }
+    .back-link:hover { text-decoration: underline; }
+    footer { background: var(--text); color: #9ca3af; text-align: center; padding: 28px 24px; font-size: 0.85rem; margin-top: 48px; }
+    footer a { color: #9ca3af; text-decoration: none; }
+    footer a:hover { color: white; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } .inv-row { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="/">FreeInsurance<span>IQ</span></a>
+  <div class="nav-links">
+    <a href="life-insurance-calculator.html">Life</a>
+    <a href="auto-insurance-calculator.html">Auto</a>
+    <a href="home-insurance-calculator.html">Home</a>
+    <a href="health-insurance-subsidy-calculator.html">Health</a>
+    <a href="renters-insurance-calculator.html">Renters</a>
+    <a href="disability-insurance-calculator.html">Disability</a>
+    <a href="long-term-care-cost-calculator.html">LTC</a>
+    <a href="about.html">About</a>
+  </div>
+</nav>
+<div class="page-hero">
+  <h1>🏢 Renters Insurance Calculator</h1>
+  <p>Your stuff is worth more than you think. Find out how much coverage you actually need — and what it costs.</p>
+</div>
+<div class="container">
+  <a class="back-link" href="/">← All Calculators</a>
+  <div class="calc-panel">
+    <h2>Renters Insurance Cost Estimator</h2>
+    <p class="subtitle">Use the guided inventory below or enter your own estimate. Average renters insurance is just $15–$30/month. · Updated June 2026</p>
+
+    <div class="inventory-box">
+      <h3>📦 Quick Property Value Estimator (optional — helps you set coverage)</h3>
+      <div class="inv-row"><label>Electronics (laptop, TV, phone, gaming)</label><input type="number" id="inv-electronics" value="3500" oninput="updateTotal()" /></div>
+      <div class="inv-row"><label>Clothing &amp; Shoes</label><input type="number" id="inv-clothing" value="2500" oninput="updateTotal()" /></div>
+      <div class="inv-row"><label>Furniture &amp; Appliances</label><input type="number" id="inv-furniture" value="4000" oninput="updateTotal()" /></div>
+      <div class="inv-row"><label>Jewelry &amp; Watches</label><input type="number" id="inv-jewelry" value="1000" oninput="updateTotal()" /></div>
+      <div class="inv-row"><label>Sporting &amp; Hobby Equipment</label><input type="number" id="inv-sports" value="800" oninput="updateTotal()" /></div>
+      <div class="inv-row"><label>Kitchen &amp; Household Items</label><input type="number" id="inv-kitchen" value="1500" oninput="updateTotal()" /></div>
+      <div class="inv-total" id="inv-total-display">Estimated Total: $13,300</div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label>Personal Property Coverage ($) <small style="font-weight:400;color:var(--muted)">(pre-filled from estimator)</small></label>
+        <input type="number" id="ri-property" value="13300" placeholder="e.g. 15000" />
+      </div>
+      <div class="form-group">
+        <label>Liability Coverage</label>
+        <select id="ri-liability">
+          <option value="100000" selected>$100,000</option>
+          <option value="300000">$300,000</option>
+          <option value="500000">$500,000</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label>Deductible</label>
+        <select id="ri-deductible">
+          <option value="250">$250</option>
+          <option value="500" selected>$500</option>
+          <option value="1000">$1,000</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Location</label>
+        <select id="ri-location">
+          <option value="low">Low-cost state (Midwest/South)</option>
+          <option value="medium" selected>Average state</option>
+          <option value="high">High-cost state (CA, NY, FL)</option>
+        </select>
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcRenters()">Calculate My Renters Insurance Cost</button>
+    <div id="renters-result" class="result-box">
+      <div class="result-main" id="ri-monthly"></div>
+      <div class="result-label">Estimated Monthly Renters Insurance Premium</div>
+      <div class="result-breakdown">
+        <div class="result-item"><div class="label">Annual Cost</div><div class="value" id="ri-annual"></div></div>
+        <div class="result-item"><div class="label">Property Coverage</div><div class="value" id="ri-prop-out"></div></div>
+        <div class="result-item"><div class="label">Liability Coverage</div><div class="value" id="ri-liab-out"></div></div>
+        <div class="result-item"><div class="label">Deductible</div><div class="value" id="ri-ded-out"></div></div>
+      </div>
+      <p id="ri-note" style="margin-top:16px; font-size:0.88rem; color:#374151; line-height:1.6;"></p>
+    </div>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="content-section">
+    <p class="quick-answer">Renters insurance costs an average of $15–$30 per month in 2026 and covers your personal belongings, liability, and additional living expenses if your apartment becomes uninhabitable. Most renters dramatically underestimate what their belongings are worth — the average renter has $30,000 or more in personal property, making renters insurance one of the best-value insurance purchases available.</p>
+
+    <h3>Why Most Renters Skip Coverage — and Regret It</h3>
+    <p>Only about 57% of renters in the U.S. have renters insurance, compared to 93% of homeowners with homeowners insurance. The main reason renters skip it: they don't think they own enough to insure. But when you add up all your electronics, clothing, furniture, jewelry, and household items, most people are surprised to find $20,000–$40,000 in personal property value. A single apartment fire or theft could wipe out years of belongings in hours. Renters insurance also protects you from something most people overlook entirely: personal liability. If your dog bites a neighbor or you accidentally start a fire that damages other units, you could be personally liable for tens of thousands in damages without coverage.</p>
+
+    <h3>What Renters Insurance Actually Covers</h3>
+    <p>A standard renters insurance policy has three core coverages: personal property (replaces your stuff if stolen, damaged by fire, vandalism, or covered perils), personal liability (pays legal costs and damages if you're found responsible for injury or property damage to others), and loss of use (pays for a hotel and meals if you can't live in your apartment due to a covered loss). Most policies also include medical payments to others — if someone is injured in your home, this pays their medical bills without requiring them to sue you. One critical check: verify whether your policy covers belongings at actual cash value (ACV) or replacement cost value (RCV). RCV costs slightly more but pays what your items cost to replace new, not their depreciated value.</p>
+
+    <h3>When Does Renters Insurance NOT Cover Your Property?</h3>
+    <p>Standard renters insurance excludes: flood damage (requires separate policy), earthquake damage (requires separate endorsement in most states), your roommate's belongings unless added to the policy, high-value jewelry or art above the policy sublimit (typically $1,500–$2,500 — add a rider for valuable items), motor vehicles, and business equipment beyond a small sublimit. If you work from home and have expensive equipment, check whether your policy covers it — many standard policies limit business property coverage to $2,500, which may not be sufficient for photographers, videographers, or other creative professionals.</p>
+  </div>
+
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5522299769790775" data-ad-slot="5890228291" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">How much renters insurance do I actually need? <span class="arrow">▼</span></button>
+      <div class="faq-a">Start by estimating the total replacement value of your personal belongings — everything from your laptop to your couch. Most financial experts recommend at minimum $20,000–$30,000 in personal property coverage for a typical one-bedroom apartment. Add $100,000–$300,000 in liability coverage (a dog bite or slip-and-fall injury can easily exceed $50,000 in medical and legal costs). The property estimator above helps you calculate a realistic number in about 2 minutes.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Does my landlord's insurance cover my belongings? <span class="arrow">▼</span></button>
+      <div class="faq-a">No. Your landlord's policy covers the building structure and their own liability — not your personal property. If there's a fire, burst pipe, or break-in, your landlord's insurer has no obligation to replace your laptop, clothes, furniture, or anything else you own. Many renters discover this only after a loss. Some landlords now require proof of renters insurance as a condition of the lease.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Can I get renters insurance if I have a dog? <span class="arrow">▼</span></button>
+      <div class="faq-a">Yes, but some breeds may affect your rates or eligibility. High-risk breeds (pit bulls, Rottweilers, German Shepherds, Dobermans in some policies) may be excluded from liability coverage or trigger higher premiums. Disclose your dog's breed upfront — failure to do so could void a liability claim. Some insurers (like Lemonade or USAA) are more lenient on breed restrictions. Dog bites account for over $1 billion in liability claims annually in the U.S., making this coverage critical for dog owners.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">Is renters insurance tax deductible? <span class="arrow">▼</span></button>
+      <div class="faq-a">Generally no — renters insurance premiums are not tax deductible for personal residences. However, if you work from home and use part of your apartment exclusively for business, you may be able to deduct a proportional share of renters insurance as a home office expense. Self-employed individuals working from home should consult a tax professional about the home office deduction, which could include a portion of your renters premium.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggleFaq(this)">What's the best way to lower renters insurance costs? <span class="arrow">▼</span></button>
+      <div class="faq-a">The most effective savings: bundle with auto insurance (saves 10–25% on both), raise your deductible from $250 to $500 or $1,000 (saves 10–15%), install deadbolts and smoke/CO detectors (safety discounts of 5–15%), maintain good credit (in states where it's permitted), and shop multiple carriers annually. Renters insurance is so affordable — typically $15–$30/month — that major discounts are harder to find than with auto or home, but bundling alone can make auto insurance noticeably cheaper.</div>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>© 2026 FreeInsuranceIQ · <a href="/">Home</a> · <a href="about.html">About</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+  <p style="margin-top:8px; font-size:0.78rem;">Estimates only. Not insurance advice. Consult a licensed insurance professional.</p>
+</footer>
+<script>
+  function updateTotal() {
+    const fields = ['inv-electronics','inv-clothing','inv-furniture','inv-jewelry','inv-sports','inv-kitchen'];
+    const total = fields.reduce((sum, id) => sum + (+document.getElementById(id).value || 0), 0);
+    document.getElementById('inv-total-display').textContent = 'Estimated Total: $' + total.toLocaleString();
+    document.getElementById('ri-property').value = total;
+  }
+
+  function calcRenters() {
+    const property   = +document.getElementById('ri-property').value || 15000;
+    const liability  = +document.getElementById('ri-liability').value;
+    const deductible = +document.getElementById('ri-deductible').value;
+    const location   = document.getElementById('ri-location').value;
+
+    // Base rate ~$0.35 per $100 of personal property
+    const baseAnnual = (property / 100) * 0.35;
+
+    // Liability add
+    const liabAdd = { 100000: 0, 300000: 28, 500000: 52 };
+
+    // Deductible discount
+    const dedAdj = { 250: 1.12, 500: 1.0, 1000: 0.86 };
+
+    // Location factor
+    const locFactor = { low: 0.82, medium: 1.0, high: 1.32 };
+
+    const annual = Math.round((baseAnnual * dedAdj[deductible] * locFactor[location]) + (liabAdd[liability] || 0));
+    const monthly = (annual / 12).toFixed(2);
+
+    document.getElementById('ri-monthly').textContent = '$' + monthly + '/mo';
+    document.getElementById('ri-annual').textContent = '$' + annual + '/yr';
+    document.getElementById('ri-prop-out').textContent = '$' + property.toLocaleString();
+    document.getElementById('ri-liab-out').textContent = '$' + Number(liability).toLocaleString();
+    document.getElementById('ri-ded-out').textContent = '$' + deductible;
+
+    let note = '💡 Renters insurance is one of the best-value purchases in personal finance. At ~$' + monthly + '/month, you\'re protecting $' + property.toLocaleString() + ' in belongings.';
+    if (property < 10000) note += ' Consider increasing coverage — most renters own more than they realize.';
+    if (liability < 300000) note += ' Consider bumping liability to $300,000 — it adds little to the premium and protects you from costly claims.';
+    document.getElementById('ri-note').textContent = note;
+    document.getElementById('renters-result').classList.add('show');
+  }
+
+  function toggleFaq(btn) {
+    const answer = btn.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
+  }
+
+  updateTotal();
+</script>
+</body>
+</html>
