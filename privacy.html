@@ -1,69 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3RK9QDQSKN"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-3RK9QDQSKN');
-  </script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-3RK9QDQSKN');</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Privacy Policy — FreeInsuranceIQ</title>
-  <meta name="description" content="FreeInsuranceIQ privacy policy. We don't sell your data. Free insurance calculators with no sign-up, no tracking, no spam." />
+  <meta name="description" content="FreeInsuranceIQ privacy policy. We don't collect personal data, sell your information, or use lead generation. Free insurance calculators with no sign-up required." />
   <link rel="canonical" href="https://freeinsuranceiq.com/privacy.html" />
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5522299769790775" crossorigin="anonymous"></script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root { --primary: #0f9e6e; --accent: #f59e0b; --bg: #f3f9f7; --card: #ffffff; --text: #1a2e25; --muted: #6b7280; --border: #d1e8df; }
-    body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
-    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; }
-    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-    .nav-logo span { color: var(--accent); }
-    .container { max-width: 700px; margin: 48px auto; padding: 0 24px; }
-    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 24px; }
-    h2 { font-size: 1.1rem; font-weight: 700; margin: 24px 0 8px; color: var(--primary); }
-    p { color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
-    a { color: var(--primary); }
-    footer { text-align: center; padding: 32px; color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); }
-    footer a { color: var(--muted); text-decoration: none; }
-    footer a:hover { color: var(--primary); }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--primary:#0f9e6e;--primary-dark:#0b7a55;--accent:#f59e0b;--bg:#f3f9f7;--card:#ffffff;--text:#1a2e25;--muted:#6b7280;--border:#d1e8df;--radius:12px;--shadow:0 2px 16px rgba(15,158,110,0.08);}
+    body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;}
+    nav{background:var(--card);border-bottom:1px solid var(--border);padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;box-shadow:0 1px 8px rgba(0,0,0,0.06);}
+    .nav-logo{font-size:1.25rem;font-weight:700;color:var(--primary);text-decoration:none;}
+    .nav-logo span{color:var(--accent);}
+    .nav-links{display:flex;gap:20px;}
+    .nav-links a{text-decoration:none;color:var(--muted);font-size:0.85rem;font-weight:500;}
+    .nav-links a:hover{color:var(--primary);}
+    .page-hero{background:linear-gradient(135deg,#0f9e6e,#0b7a55);color:white;text-align:center;padding:44px 24px 36px;}
+    .page-hero h1{font-size:2rem;font-weight:800;margin-bottom:10px;}
+    .page-hero p{font-size:1rem;opacity:0.9;max-width:520px;margin:0 auto;}
+    .container{max-width:760px;margin:0 auto;padding:40px 24px;}
+    .content-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:32px;border:1px solid var(--border);margin-bottom:24px;}
+    h2{font-size:1.2rem;font-weight:700;color:var(--primary);margin-bottom:12px;}
+    p{font-size:0.94rem;line-height:1.75;color:#374151;margin-bottom:14px;}
+    p:last-child{margin-bottom:0;}
+    ul{margin:0 0 14px 20px;color:#374151;}
+    li{margin-bottom:8px;font-size:0.94rem;line-height:1.6;}
+    a{color:var(--primary);}
+    .highlight-box{background:#e6f7f2;border-left:4px solid var(--primary);padding:16px 18px;border-radius:8px;margin-bottom:24px;}
+    .highlight-box p{margin:0;font-weight:500;color:#065f46;}
+    footer{background:#1a2e25;color:#9ca3af;text-align:center;padding:28px 24px;font-size:0.85rem;margin-top:48px;}
+    footer a{color:#9ca3af;text-decoration:none;}
+    footer a:hover{color:white;}
+    @media(max-width:600px){.nav-links{display:none;}}
   </style>
 </head>
 <body>
-<nav><a class="nav-logo" href="/">FreeInsurance<span>IQ</span></a></nav>
-<div class="container">
+<nav>
+  <a class="nav-logo" href="/">FreeInsurance<span>IQ</span></a>
+  <div class="nav-links">
+    <a href="life-insurance-calculator.html">Life</a>
+    <a href="auto-insurance-calculator.html">Auto</a>
+    <a href="home-insurance-calculator.html">Home</a>
+    <a href="health-insurance-subsidy-calculator.html">Health</a>
+    <a href="blog/">Blog</a>
+  </div>
+</nav>
+<div class="page-hero">
   <h1>Privacy Policy</h1>
-  <p><em>Last updated: June 1, 2026</em></p>
+  <p>We built this site on a simple promise: you get the information you need without giving us anything in return.</p>
+</div>
+<div class="container">
 
-  <h2>Information We Collect</h2>
-  <p>FreeInsuranceIQ does not collect, store, or transmit any personal data you enter into our calculators. All calculations run entirely in your browser. No calculator inputs are sent to our servers or any third party.</p>
+  <div class="highlight-box">
+    <p>📅 Last updated: June 2026 &nbsp;·&nbsp; Short version: We don't collect your personal data. We don't sell leads to insurance companies. Every calculation you run stays entirely in your browser.</p>
+  </div>
 
-  <h2>Google AdSense</h2>
-  <p>We display advertising through Google AdSense. Google may use cookies and similar technologies to show you relevant ads based on your browsing activity. FreeInsuranceIQ does not control the content of these advertisements and does not share your personal information with Google for this purpose beyond standard web browsing activity. To learn more, visit <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>. You can opt out of personalized advertising at <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>.</p>
+  <div class="content-card">
+    <h2>Our Core Commitment</h2>
+    <p>FreeInsuranceIQ was built on a frustration with the insurance industry's lead-generation model: every time someone searches for insurance information, they're funneled into a form that harvests their contact information and sells it to agents who call relentlessly. We built something different — a site that actually helps people understand their insurance needs without any of that.</p>
+    <p>This privacy policy documents that commitment in detail. We want you to know exactly what we do — and don't do — with information on this site.</p>
+  </div>
 
-  <h2>Google Analytics</h2>
-  <p>We use Google Analytics (GA4) to understand how visitors use our site in aggregate. This includes pages visited, time spent on site, and general geographic location (city/state level). We do not collect names, email addresses, or personally identifying information through analytics. You can opt out using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
+  <div class="content-card">
+    <h2>Calculator Data: What Happens to Your Inputs</h2>
+    <p>When you use any calculator on FreeInsuranceIQ — whether it's the life insurance calculator, the ACA subsidy estimator, the auto insurance estimator, or any other tool — all calculations run entirely within your web browser using JavaScript. Your inputs are never transmitted to our servers, to Google, to any insurance company, or to any third party.</p>
+    <p>We do not store your inputs. We do not log them. We cannot see them. They exist only in your browser session and disappear when you close the tab. There is no account system, no login, and no way to associate your calculator results with your identity.</p>
+    <p>This is a fundamental design choice, not just a policy. We intentionally built server-free calculators so that even if our practices changed, there would be no mechanism to collect your data.</p>
+  </div>
 
-  <h2>Cookies</h2>
-  <p>FreeInsuranceIQ itself does not set first-party cookies. Third-party cookies may be set by Google AdSense and Google Analytics as described above. You can manage cookie preferences through your browser settings.</p>
+  <div class="content-card">
+    <h2>Google AdSense: How We Make Money</h2>
+    <p>FreeInsuranceIQ displays advertising through Google AdSense. This is how we keep all calculators and articles permanently free. The ads are served by Google, not by us directly.</p>
+    <p>Google AdSense may use cookies and similar tracking technologies to show you relevant advertisements based on your previous browsing activity across the web. This is Google's standard advertising behavior. Importantly:</p>
+    <ul>
+      <li>We do not share your calculator inputs with Google for advertising purposes</li>
+      <li>We do not receive information about you from Google's ad targeting</li>
+      <li>The ads displayed are not from insurance companies paying for leads from our visitors — they are standard contextual/behavioral display ads</li>
+    </ul>
+    <p>You can opt out of Google's personalized advertising at any time through <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ads Settings</a>. To learn more about how Google uses data from sites that use its services, visit <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">Google's Partner Sites Policy</a>.</p>
+  </div>
 
-  <h2>No Data Sales</h2>
-  <p>We do not sell, rent, or share your personal information with insurance companies, brokers, lead generation services, or any other third parties. FreeInsuranceIQ is not an insurance lead generation site.</p>
+  <div class="content-card">
+    <h2>Google Analytics: Aggregate Traffic Data</h2>
+    <p>We use Google Analytics 4 (GA4) to understand how visitors use our site in aggregate. This helps us improve the site — for example, learning which calculators are most used, where visitors are located geographically, and whether the site loads well on mobile devices.</p>
+    <p>Google Analytics collects:</p>
+    <ul>
+      <li>Pages visited and time spent on each page</li>
+      <li>General geographic location (country, state/region — not precise address)</li>
+      <li>Browser type and operating system</li>
+      <li>Whether you arrived via search, direct link, or social media</li>
+      <li>Screen size and device type</li>
+    </ul>
+    <p>Google Analytics does not collect your name, email address, phone number, or any personally identifying information. The data we access is aggregated and anonymous — we see that "X visitors used the life insurance calculator this week from California," not who those visitors are.</p>
+    <p>You can opt out of Google Analytics data collection using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a>.</p>
+  </div>
 
-  <h2>Children's Privacy</h2>
-  <p>FreeInsuranceIQ is not directed to children under 13. We do not knowingly collect personal information from children.</p>
+  <div class="content-card">
+    <h2>Cookies</h2>
+    <p>FreeInsuranceIQ itself does not set any first-party cookies. We have no login system, no user preferences to remember, and no shopping cart. There is no cookie from freeinsuranceiq.com stored on your device when you visit.</p>
+    <p>Third-party cookies may be placed by Google AdSense and Google Analytics as described in the sections above. You can manage, view, and delete cookies through your browser's privacy settings. Most modern browsers allow you to block third-party cookies entirely; doing so will not affect the functionality of our calculators in any way.</p>
+  </div>
 
-  <h2>Changes to This Policy</h2>
-  <p>We may update this privacy policy from time to time. The "last updated" date at the top of this page reflects the most recent revision.</p>
+  <div class="content-card">
+    <h2>We Do Not Sell or Share Your Data</h2>
+    <p>FreeInsuranceIQ is not an insurance lead generation site. We do not sell, rent, share, or transmit your personal information to insurance companies, insurance brokers, agents, comparison sites, or any other third party for marketing or sales purposes.</p>
+    <p>We do not have business relationships with any insurance carrier, agent, or brokerage that involve sharing visitor data. We do not receive referral fees, lead purchase payments, or commissions based on you contacting any insurance company. Our only revenue comes from the Google AdSense display advertising described above.</p>
+  </div>
 
-  <h2>Contact</h2>
-  <p>Questions about this privacy policy? Contact us through our website. We aim to respond to privacy inquiries within 5 business days.</p>
+  <div class="content-card">
+    <h2>Children's Privacy</h2>
+    <p>FreeInsuranceIQ is not directed at children under the age of 13 and is not designed to appeal to children. We do not knowingly collect personal information from anyone under 13. If you are a parent or guardian and believe your child has provided personal information to us in any way, please contact us and we will promptly address the concern.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Do Not Track</h2>
+    <p>Some browsers have a "Do Not Track" feature that signals websites not to track user behavior. FreeInsuranceIQ does not currently respond to Do Not Track signals because we do not conduct behavioral tracking of our own. Third-party services (Google AdSense, Google Analytics) have their own Do Not Track policies.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Changes to This Policy</h2>
+    <p>If we make material changes to this privacy policy, we will update the "last updated" date at the top of this page. We encourage you to review this page periodically. Your continued use of the site after changes are posted constitutes acceptance of those changes.</p>
+    <p>We will never change our core commitment: no collection of calculator data, no selling of leads to insurance companies, and no email harvesting. Those are structural commitments baked into how the site is built, not just policy statements.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Contact</h2>
+    <p>If you have questions, concerns, or requests related to this privacy policy or the way FreeInsuranceIQ handles data, please reach out through our website. We take privacy inquiries seriously and aim to respond within 5 business days.</p>
+  </div>
+
 </div>
 <footer>
-  <p>© 2026 FreeInsuranceIQ · <a href="/">Home</a> · <a href="about.html">About</a> · <a href="terms.html">Terms of Use</a></p>
+  <p>© 2026 FreeInsuranceIQ · <a href="/">Home</a> · <a href="blog/">Blog</a> · <a href="about.html">About</a> · <a href="terms.html">Terms of Use</a></p>
+  <p style="margin-top:8px;font-size:0.78rem;">FreeInsuranceIQ is an independent educational tool. Not affiliated with any insurance company, broker, or agent.</p>
 </footer>
 </body>
 </html>
