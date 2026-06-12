@@ -72,6 +72,76 @@
     footer a:hover { color: white; }
     @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
   </style>
+  <!-- FAQPage Schema (AEO) -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "When can I enroll in ACA marketplace health insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open enrollment for 2026 ACA marketplace plans runs November 1 through January 15, with coverage beginning January 1 (February 1 for enrollments completed after December 15). Outside open enrollment, a Special Enrollment Period (SEP) lets you enroll within 60 days of a qualifying life event: losing employer coverage, getting married, having or adopting a child, moving to a new state, or experiencing a significant income change. If your income drops mid-year and you become newly eligible for subsidies, that income change itself can trigger an SEP."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if my income is below 100% of the Federal Poverty Level?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Below 100% FPL, you don't qualify for ACA marketplace subsidies — but in the 40 states (plus D.C.) that have expanded Medicaid, you likely qualify for Medicaid at little to no cost. In the 10 states that have not expanded Medicaid, a coverage gap may exist where you earn too much for Medicaid but too little for subsidies. If you're in that situation, contact your state Medicaid office or a free local navigator (find one at localhelp.healthcare.gov) — some states have additional programs that may help."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get subsidies if my employer offers health insurance?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Generally, no — if your employer offers coverage that meets minimum standards, you can't get marketplace subsidies. For 2026, employer coverage is considered \"unaffordable\" if the employee-only premium exceeds 9.02% of your household income. A key 2022 rule change — the \"family glitch\" fix — now means that family affordability is evaluated based on the actual cost of family coverage (not just the employee-only cost). If adding family members to your workplace plan costs more than 9.02% of income, those family members may now qualify for marketplace subsidies even if you don't."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the difference between Bronze, Silver, Gold, and Platinum plans?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All metal tiers cover the same essential health benefits — the difference is how you split costs with the insurer. Bronze: lowest premium, highest deductible (typically $6,000–$8,000). Silver: mid-range premium, mid-range deductible ($2,000–$4,500 standard; as low as $200–$500 with CSR for incomes under 250% FPL). Gold: higher premium, lower deductible (~$1,000–$2,000). Platinum: highest premium, lowest cost-sharing (covers 90% of costs). If your income is under 250% FPL, Silver with CSR is almost always the best deal — the reduced deductible is worth far more than the premium difference compared to Bronze."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I underestimate my income and get too large a subsidy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — if you claimed too large a subsidy based on your estimated income and your actual income came in higher, you'll repay the difference when you file your federal tax return (Form 8962). Repayment caps apply: at 100–200% FPL, the max repayment is $350 (individual) or $700 (family). At 300–400% FPL, the cap is $1,425–$2,850. Above 400% FPL, there is no cap — you repay the full excess subsidy with no limit. The best protection: update your marketplace income estimate whenever your earnings change by more than $5,000 during the year."
+      }
+    }
+  ]
+}
+  </script>
+  <!-- BreadcrumbList Schema (AEO) -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "FreeInsuranceIQ",
+      "item": "https://freeinsuranceiq.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Health Insurance Subsidy Calculator",
+      "item": "https://freeinsuranceiq.com/health-insurance-subsidy-calculator.html"
+    }
+  ]
+}
+  </script>
 </head>
 <body>
 <nav>
