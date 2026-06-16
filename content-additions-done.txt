@@ -1,0 +1,107 @@
+FreeInsuranceIQ Content Additions — Completed June 2026
+=========================================================
+
+PURPOSE: Add substantial editorial content to qualify for Google AdSense approval
+(site was rejected for "Low value content").
+
+FILES CREATED / MODIFIED
+-------------------------
+
+1. NEW BLOG ARTICLE — Flood Insurance
+   File: /websites/insurance-calc/blog/does-homeowners-insurance-cover-flooding.html
+   URL:  https://freeinsuranceiq.com/blog/does-homeowners-insurance-cover-flooding.html
+   Title: "Does Homeowners Insurance Cover Flooding? What Most People Get Wrong"
+   Word count: ~1,000 words (body text)
+   Topics covered:
+     - Standard homeowners insurance never covers floods (critical distinction)
+     - What homeowners insurance DOES cover (burst pipes, appliance failures, roof leaks)
+     - What counts as "flooding" per insurance industry definition
+     - NFIP (National Flood Insurance Program) — what it is, how it works
+     - NFIP coverage limits: $250K building / $100K contents
+     - 2026 NFIP average costs: $800–$900/yr; Risk Rating 2.0 explained
+     - NFIP vs. private flood insurance comparison table
+     - Storm drain / sewer backup — the third category not covered by either
+     - The 30-day waiting period warning
+     - Action plan for readers
+   CTA: /home-insurance-calculator.html
+   AdSense: ca-pub-5522299769790775 | GA4: G-3RK9QDQSKN ✓
+
+2. NEW BLOG ARTICLE — Lowering Auto Insurance
+   File: /websites/insurance-calc/blog/how-to-lower-car-insurance-rates.html
+   URL:  https://freeinsuranceiq.com/blog/how-to-lower-car-insurance-rates.html
+   Title: "11 Ways to Actually Lower Your Car Insurance Rate in 2026"
+   Word count: ~1,050 words (body text)
+   Topics covered (11 numbered strategies):
+     1. Shop competing quotes every 12–18 months (avg $400–$500 savings)
+     2. The loyalty paradox — long-term customers often pay more
+     3. Bundling home/auto (5–25% discount)
+     4. Telematics programs — Progressive Snapshot, State Farm Drive Safe & Save
+     5. Raise deductibles from $500 to $1,000+ (save 15–25%)
+     6. Drop collision/comprehensive on old vehicles (when car < $5K)
+     7. Credit score impact in 46 states (30–50% variance between credit tiers)
+     8. Good driver and good student discounts (ask explicitly)
+     9. Defensive driving courses (5–15%, lasts 3 years)
+    10. Pay-per-mile insurance for low-mileage drivers (Metromile/Mile Auto)
+    11. Annual vs. monthly billing (save 3–10% + eliminate installment fees)
+   Bonus: "What Doesn't Work" section debunking myths
+   CTA: /auto-insurance-calculator.html
+   AdSense: ca-pub-5522299769790775 | GA4: G-3RK9QDQSKN ✓
+
+3. NEW BLOG ARTICLE — Renters Insurance Coverage Guide
+   File: /websites/insurance-calc/blog/what-does-renters-insurance-actually-cover.html
+   URL:  https://freeinsuranceiq.com/blog/what-does-renters-insurance-actually-cover.html
+   Title: "What Does Renters Insurance Actually Cover? The Complete 2026 Guide"
+   Word count: ~1,050 words (body text)
+   Topics covered:
+     - The 3 pillars: Personal Property, Liability, Additional Living Expenses (ALE)
+     - ACV vs. Replacement Cost Value — critical distinction explained
+     - Covered perils (fire, theft, burst pipes, wind, etc.)
+     - Liability coverage: what it covers, why $300K is recommended
+     - ALE coverage: hotel, meals, storage when apartment uninhabitable
+     - Comprehensive covered vs. NOT covered grid
+     - Roommate issue (each person needs their own policy)
+     - High-value item sub-limits and scheduled personal property endorsements
+     - Car theft vs. items stolen from car — which policy covers what
+     - How much coverage to buy (honest inventory approach)
+     - 2026 cost: $15–$25/mo average; factors that affect premium
+     - When to file a claim (and when NOT to)
+   CTA: /renters-insurance-calculator.html
+   AdSense: ca-pub-5522299769790775 | GA4: G-3RK9QDQSKN ✓
+
+4. HOMEPAGE EDITORIAL SECTION ADDED
+   File modified: /websites/insurance-calc/index.html
+   Section HTML also saved to: /websites/insurance-calc/homepage-editorial-section.html
+   Section title: "Understanding Insurance: What You Need to Know"
+   Location: Inserted before </footer>, inside main .container div
+   Word count: ~470 words
+   Topics covered:
+     - 1 in 4 homeowners underinsured; 40% of renters have no coverage
+     - Quotes vs. estimates vs. actual coverage — definitions explained
+     - How insurance premiums are calculated (risk pooling / actuarial)
+     - Importance of annual coverage review (inflation erodes coverage)
+     - What to do when filing a claim (step-by-step)
+   Styled as white card matching site design (.content-section)
+
+5. BLOG INDEX UPDATED
+   File modified: /websites/insurance-calc/blog/index.html
+   Added 3 new article cards to the .blog-grid matching existing card style:
+     - 🌊 Does Homeowners Insurance Cover Flooding? (Home Insurance tag)
+     - 💰 11 Ways to Actually Lower Your Car Insurance Rate (Auto Insurance tag)
+     - 📋 What Does Renters Insurance Actually Cover? (Renters Insurance tag)
+
+TOTAL NEW CONTENT
+-----------------
+- 3 new long-form blog articles (~3,100 words of body content total)
+- 1 homepage editorial section (~470 words)
+- Grand total: ~3,570 words of new editorial content added to FreeInsuranceIQ
+
+ADSENSE COMPLIANCE
+------------------
+All new articles include:
+  ✓ AdSense script tag (ca-pub-5522299769790775)
+  ✓ GA4 tag (G-3RK9QDQSKN)
+  ✓ 2 AdSense ad units per article body
+  ✓ Correct footer with Blog/About/Privacy/Terms/Contact links
+  ✓ Canonical URL tags
+  ✓ OG/Twitter meta tags for social sharing
+  ✓ Internal links to relevant calculators
