@@ -52,7 +52,7 @@
     footer a:hover{color:white;}
     @media(max-width:600px){.nav-links{display:none;}}
   .amazon-rec{background:#e6f7f2;border:1px solid #bbf7d0;border-radius:12px;padding:20px 24px;margin:32px 0;}.amazon-rec-label{font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:0.05em;color:#0f9e6e;margin-bottom:12px;}.amazon-rec-item{display:flex;gap:16px;align-items:flex-start;}.amazon-rec-info{flex:1;}.amazon-rec-title{font-weight:700;font-size:1rem;color:#1a1a2e;margin-bottom:4px;}.amazon-rec-desc{font-size:0.88rem;color:#6b7280;margin-bottom:10px;}.amazon-rec-btn{display:inline-block;background:#0f9e6e;color:white;font-size:0.85rem;font-weight:600;padding:8px 16px;border-radius:6px;text-decoration:none;}.amazon-rec-btn:hover{background:#0b7a55;}
-  </style>
+  .amazon-rec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:8px;}.amazon-rec-item{background:rgba(255,255,255,0.5);border-radius:8px;padding:14px;}.amazon-rec-author{font-size:0.82rem;color:#6b7280;margin-bottom:6px;font-style:italic;}</style>
 </head>
 <body>
 <nav>
@@ -168,11 +168,30 @@
 </div>
 <div class="amazon-rec">
   <div class="amazon-rec-label">📚 Recommended Reading</div>
-  <div class="amazon-rec-item">
-    <div class="amazon-rec-info">
-      <div class="amazon-rec-title">Die with Zero</div>
-      <div class="amazon-rec-desc">Bill Perkins reframes how to think about life, money, and providing for the people you love.</div>
-      <a class="amazon-rec-btn" href="https://www.amazon.com/dp/B07T2G4RZH/ref=nosim?tag=envisionconte-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+  <div class="amazon-rec-grid">
+    <div class="amazon-rec-item">
+      <div class="amazon-rec-info">
+        <div class="amazon-rec-title">Money. Wealth. Life Insurance.</div>
+        <div class="amazon-rec-author">Jake Thompson</div>
+        <div class="amazon-rec-desc">The #1 Amazon bestseller on life insurance — how to use it as a wealth-building tool, not just protection.</div>
+        <a class="amazon-rec-btn" href="https://www.amazon.com/dp/0988750147/ref=nosim?tag=envisionconte-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+      </div>
+    </div>
+    <div class="amazon-rec-item">
+      <div class="amazon-rec-info">
+        <div class="amazon-rec-title">The Life Insurance Handbook</div>
+        <div class="amazon-rec-author">Louis Teitelbaum</div>
+        <div class="amazon-rec-desc">A comprehensive guide to understanding life insurance types, how much coverage you actually need, and what to avoid.</div>
+        <a class="amazon-rec-btn" href="https://www.amazon.com/dp/1564141837/ref=nosim?tag=envisionconte-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+      </div>
+    </div>
+    <div class="amazon-rec-item">
+      <div class="amazon-rec-info">
+        <div class="amazon-rec-title">Die with Zero</div>
+        <div class="amazon-rec-author">Bill Perkins</div>
+        <div class="amazon-rec-desc">A provocative look at life insurance, legacy, and optimizing how much protection your family truly needs.</div>
+        <a class="amazon-rec-btn" href="https://www.amazon.com/dp/0358099765/ref=nosim?tag=envisionconte-20" target="_blank" rel="noopener sponsored">View on Amazon →</a>
+      </div>
     </div>
   </div>
 </div>
