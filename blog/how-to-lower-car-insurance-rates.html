@@ -27,9 +27,9 @@
     .nav-links{display:flex;gap:20px;}
     .nav-links a{text-decoration:none;color:var(--muted);font-size:0.85rem;font-weight:500;}
     .nav-links a:hover{color:var(--primary);}
-    .hero{background:linear-gradient(135deg,#0f9e6e,#0b7a55);color:white;padding:48px 24px 40px;text-align:center;}
-    .hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin-bottom:12px;}
-    .hero p{font-size:1rem;opacity:0.9;max-width:600px;margin:0 auto;}
+    .hero{background:linear-gradient(135deg,#0f9e6e,#0b7a55);position:relative;color:white;padding:64px 24px 52px;text-align:center;overflow:hidden;min-height:280px;display:flex;align-items:center;justify-content:center;}.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1200&q=80&auto=format&fit=crop');background-size:cover;background-position:center;filter:brightness(0.32);z-index:0;}.hero-content{position:relative;z-index:1;max-width:680px;margin:0 auto;}
+    .hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:800;margin-bottom:12px;color:#ffffff;text-shadow:0 2px 8px rgba(0,0,0,0.9);}
+    .hero p{font-size:1rem;opacity:1;max-width:600px;margin:0 auto;color:#ffffff;font-weight:600;text-shadow:0 2px 8px rgba(0,0,0,0.9);}
     .container{max-width:780px;margin:0 auto;padding:40px 24px;}
     .article-meta{color:var(--muted);font-size:0.85rem;margin-bottom:32px;padding-bottom:16px;border-bottom:1px solid var(--border);}
     h2{font-size:1.4rem;font-weight:700;color:var(--primary);margin:36px 0 12px;}
@@ -72,8 +72,11 @@
   </div>
 </nav>
 <div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
   <h1>11 Ways to Actually Lower Your Car Insurance Rate in 2026</h1>
   <p>Proven strategies that work — beyond the generic advice you've already heard.</p>
+  </div>
 </div>
 <div class="container">
   <div class="article-meta">📅 June 2026 &nbsp;·&nbsp; 10 min read &nbsp;·&nbsp; Auto Insurance</div>
