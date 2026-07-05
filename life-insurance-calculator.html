@@ -56,11 +56,29 @@
     .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
     .nav-links a:hover { color: var(--primary); }
     .page-hero {
-      background: linear-gradient(135deg, #0f9e6e 0%, #0b7a55 100%);
-      color: white; text-align: center; padding: 44px 24px 36px;
+      position: relative;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+      padding: 56px 24px 44px;
     }
-    .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; }
-    .page-hero p { font-size: 1rem; opacity: 0.9; max-width: 520px; margin: 0 auto; }
+    .page-hero .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1511895426328-dc8714191011?w=1400&q=80&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.35);
+      z-index: 0;
+    }
+    .page-hero .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.85); }
+    .page-hero p { font-size: 1rem; opacity: 0.95; max-width: 520px; margin: 0 auto; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.8); }
     .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
     .calc-panel {
       background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow);
@@ -212,8 +230,11 @@
 </nav>
 
 <div class="page-hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
   <h1>🛡️ Life Insurance Calculator</h1>
   <p>How much life insurance do you actually need? Get your number in 60 seconds.</p>
+</div>
 </div>
 
 <div class="container">
