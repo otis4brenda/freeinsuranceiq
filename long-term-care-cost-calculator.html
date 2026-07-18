@@ -196,6 +196,14 @@
 </div>
 <div class="container">
   <a class="back-link" href="/">← All Calculators</a>
+
+  <!-- Above-calculator editorial intro -->
+  <div class="content-section" style="margin-bottom:24px;">
+    <h2 style="font-size:1.25rem;font-weight:800;margin-bottom:12px;">What Does Long-Term Care Cost in 2026?</h2>
+    <p>Long-term care refers to ongoing assistance with activities of daily living — bathing, dressing, eating, mobility, continence, and transferring — needed when an illness, injury, or cognitive decline makes independent living difficult or impossible. It's distinct from medical care: long-term care is custodial, not curative. In 2026, the national average cost of a private room in a nursing home is approximately $9,500/month, assisted living averages $5,900/month, and professional in-home aides run around $5,200/month for 44 hours of care per week. These are not rare or hypothetical expenses — the U.S. Department of Health estimates that 70% of Americans over age 65 will require some form of long-term care services.</p>
+    <p>Because Medicare covers almost no custodial long-term care and Medicaid only kicks in after most savings are exhausted, the financial burden typically falls on the individual or their family. Use the calculator below to estimate your specific exposure based on your state, preferred care type, and projected care duration.</p>
+  </div>
+
   <div class="calc-panel">
     <h2>Long-Term Care Cost Estimator — 2026</h2>
     <p class="subtitle">Uses 2026 senior care cost benchmarks adjusted by state. Figures include 3% annual inflation projection. · Updated July 2026</p>
@@ -303,6 +311,66 @@
       <button class="faq-q" onclick="toggleFaq(this)">What is a hybrid life/LTC policy and is it better than standalone LTC insurance? <span class="arrow">▼</span></button>
       <div class="faq-a">The best time to buy long-term care insurance is between ages 50 and 60—you're young enough to qualify at standard rates, but close enough to likely need it to justify the premium. Waiting until 65 or later significantly raises premiums and increases the risk of being denied coverage due to pre-existing conditions. Many financial planners recommend targeting a benefit of $150–$200 per day for 3 years with a 3% inflation rider as a solid baseline policy.</div>
     </div>
+  </div>
+
+  <!-- 2026 Long-Term Care Costs by Care Type & State Table -->
+  <div style="background:white;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);padding:28px 32px;margin-bottom:32px;">
+    <h2 style="font-size:1.2rem;font-weight:800;color:var(--text);margin:0 0 6px;">2026 Long-Term Care Monthly Costs by Type and State</h2>
+    <p style="color:var(--muted);font-size:0.85rem;margin-bottom:18px;">Monthly cost benchmarks based on Genworth 2026 Cost of Care Survey. Costs vary significantly by city; these represent state median figures.</p>
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.85rem;">
+      <thead>
+        <tr style="background:#f0fdf8;">
+          <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border);">State</th>
+          <th style="text-align:right;padding:10px 12px;border-bottom:2px solid var(--border);">In-Home Aide<br><small style="font-weight:400;color:var(--muted)">44 hrs/wk</small></th>
+          <th style="text-align:right;padding:10px 12px;border-bottom:2px solid var(--border);">Assisted Living<br><small style="font-weight:400;color:var(--muted)">private room</small></th>
+          <th style="text-align:right;padding:10px 12px;border-bottom:2px solid var(--border);">Memory Care<br><small style="font-weight:400;color:var(--muted)">facility</small></th>
+          <th style="text-align:right;padding:10px 12px;border-bottom:2px solid var(--border);">Nursing Home<br><small style="font-weight:400;color:var(--muted)">private room</small></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:#fff8f8;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Alaska</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$14,600</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$9,800</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$12,400</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$28,400</td></tr>
+        <tr style="background:#fff8f8;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Massachusetts</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$8,800</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$7,400</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$9,200</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$14,300</td></tr>
+        <tr style="background:#fff8f8;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Connecticut</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$8,100</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$6,900</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$8,700</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$13,200</td></tr>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">New York</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$7,700</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$6,400</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$8,200</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$12,800</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">California</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$7,100</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$6,000</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$7,600</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$11,200</td></tr>
+        <tr style="background:#f0fdf8;font-weight:700;"><td style="padding:8px 12px;border-bottom:1px solid #d1e8df;">National Average</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #d1e8df;">$5,200</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #d1e8df;">$5,900</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #d1e8df;">$7,800</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #d1e8df;">$9,500</td></tr>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Florida</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$4,800</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$4,300</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$5,600</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$8,400</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Ohio</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$4,600</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$4,100</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$5,200</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$8,100</td></tr>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Texas</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$4,400</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$3,900</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$5,000</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$7,700</td></tr>
+        <tr style="background:#f0fff8;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Missouri</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$4,000</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$3,600</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$4,600</td><td style="text-align:right;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$7,000</td></tr>
+        <tr style="background:#f0fff8;"><td style="padding:8px 12px;font-weight:600;">Mississippi</td><td style="text-align:right;padding:8px 12px;">$3,700</td><td style="text-align:right;padding:8px 12px;">$3,200</td><td style="text-align:right;padding:8px 12px;">$4,200</td><td style="text-align:right;padding:8px 12px;">$6,500</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="color:var(--muted);font-size:0.8rem;margin-top:12px;">Source: Genworth Cost of Care Survey 2026. Memory care costs are typically $1,000–$2,500/month higher than standard assisted living. All figures are monthly. Nursing home rates shown for private room; semi-private runs 15–20% less.</p>
+  </div>
+
+  <!-- LTC Funding Options Comparison -->
+  <div style="background:white;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);padding:28px 32px;margin-bottom:32px;">
+    <h2 style="font-size:1.2rem;font-weight:800;color:var(--text);margin:0 0 6px;">Long-Term Care Funding Options: A Side-by-Side Comparison</h2>
+    <p style="color:var(--muted);font-size:0.85rem;margin-bottom:18px;">There is no single right answer — the best strategy depends on your assets, health, family situation, and risk tolerance. Here's how the main options compare.</p>
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+      <thead>
+        <tr style="background:#f0fdf8;">
+          <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border);">Funding Option</th>
+          <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border);">Best For</th>
+          <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border);">Key Advantages</th>
+          <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border);">Key Risks / Limits</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Self-Insurance (savings)</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Assets $1M+</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">No premiums; full control of assets</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Catastrophic care need can deplete estate; inflation risk</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Traditional LTCi</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Age 50–60, good health</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Lower initial premiums; flexible benefit options</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Premiums not guaranteed; major carriers exited market</td></tr>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Hybrid Life/LTC Policy</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Ages 50–65; wants certainty</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Guaranteed level premiums; death benefit if unused</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Higher upfront cost; opportunity cost of lump sum</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Annuity with LTC Rider</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Ages 60+; lump sum available</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Doubles or triples LTC benefit from annuity principal</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Less liquidity; complex product structure</td></tr>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Medicaid</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Assets under state limit</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Full coverage after spend-down; no ongoing premiums</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Must spend most assets first; limited facility choices</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:8px 12px;">Family Caregiving</td><td style="padding:8px 12px;">Mild need; supportive family</td><td style="padding:8px 12px;">No direct cost; familiar environment</td><td style="padding:8px 12px;">Average $324,000 in caregiver earnings loss; burnout risk</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="color:#374151;font-size:0.88rem;line-height:1.7;margin-top:14px;">Most financial planners recommend a hybrid approach: some self-insurance through retirement savings, supplemented by a hybrid life/LTC policy to cap catastrophic exposure. The right combination depends on your specific asset level, health history, and family situation.</p>
   </div>
 
   <!-- When to Talk to a Long-Term Care Specialist -->

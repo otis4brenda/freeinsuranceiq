@@ -197,6 +197,14 @@
 </div>
 <div class="container">
   <a class="back-link" href="/">← All Calculators</a>
+
+  <!-- Above-calculator editorial intro -->
+  <div class="content-section" style="margin-bottom:24px;">
+    <h2 style="font-size:1.25rem;font-weight:800;margin-bottom:12px;">What Is Disability Insurance and How Much Do You Need?</h2>
+    <p>Disability insurance replaces a portion of your income — typically 60–70% of gross earnings — when a serious illness or injury prevents you from working. Unlike life insurance, which protects your family after you die, disability insurance protects your family while you're still alive but unable to work. For most working Americans, that risk is significantly underestimated: the Social Security Administration estimates that 1 in 4 workers currently entering the workforce will experience a disability lasting at least 12 months before reaching retirement age.</p>
+    <p>In 2026, the average individual long-term disability (LTD) policy costs $80–$300 per month depending on your income, age, and occupation — a meaningful but manageable expense compared to the financial catastrophe of 6–24 months without income. Use the calculator below to find your specific coverage gap: how much income you'd lose, how long your savings would last, and what benefit amount to target when shopping for coverage.</p>
+  </div>
+
   <div class="calc-panel">
     <h2>Disability Income Insurance Needs Calculator</h2>
     <p class="subtitle">See how long your savings would last, your monthly income gap, and how much disability coverage to buy. · Updated July 2026</p>
@@ -285,6 +293,89 @@
       <button class="faq-q" onclick="toggleFaq(this)">Does disability insurance cover mental health conditions? <span class="arrow">▼</span></button>
       <div class="faq-a">Yes — self-employed workers and freelancers can purchase individual disability policies, though they typically cost 20–30% more than employer-sponsored group plans. In 2026, independent workers earning $50,000–$100,000/year generally pay $100–$300/month for comprehensive LTD coverage with own-occupation definitions. Most insurers require 2 years of documented self-employment income to qualify, and coverage typically begins after a 90-day elimination period.</div>
     </div>
+  </div>
+
+  <!-- Disability Insurance Cost by Age & Occupation Table -->
+  <div style="background:white;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);padding:28px 32px;margin-bottom:32px;">
+    <h2 style="font-size:1.2rem;font-weight:800;color:var(--text);margin:0 0 6px;">2026 Disability Insurance Premiums by Age & Occupation Class</h2>
+    <p style="color:var(--muted);font-size:0.85rem;margin-bottom:18px;">Monthly premiums for a 90-day elimination period, 5-year benefit period individual LTD policy replacing 60% of income. Occupation class ranges from 4A (desk/professional work) to 1A (manual/hazardous labor). Source: AALTCI 2026 premium benchmarks.</p>
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+      <thead>
+        <tr style="background:#f0fdf8;">
+          <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border);">Annual Income</th>
+          <th style="text-align:center;padding:10px 12px;border-bottom:2px solid var(--border);">Age 30<br><small style="font-weight:400;color:var(--muted)">4A (office)</small></th>
+          <th style="text-align:center;padding:10px 12px;border-bottom:2px solid var(--border);">Age 40<br><small style="font-weight:400;color:var(--muted)">4A (office)</small></th>
+          <th style="text-align:center;padding:10px 12px;border-bottom:2px solid var(--border);">Age 50<br><small style="font-weight:400;color:var(--muted)">4A (office)</small></th>
+          <th style="text-align:center;padding:10px 12px;border-bottom:2px solid var(--border);">Age 40<br><small style="font-weight:400;color:var(--muted)">2A (skilled)</small></th>
+          <th style="text-align:center;padding:10px 12px;border-bottom:2px solid var(--border);">Age 40<br><small style="font-weight:400;color:var(--muted)">1A (manual)</small></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">$48,000/yr ($4,000/mo)</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$52/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$74/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$115/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$108/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$155/mo</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">$72,000/yr ($6,000/mo)</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$78/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$112/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$173/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$163/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$233/mo</td></tr>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">$96,000/yr ($8,000/mo)</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$104/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$149/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$231/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$218/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$311/mo</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">$120,000/yr ($10,000/mo)</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$130/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$186/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$289/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$272/mo</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$389/mo</td></tr>
+        <tr><td style="padding:8px 12px;font-weight:600;">$180,000/yr ($15,000/mo)</td><td style="text-align:center;padding:8px 12px;">$195/mo</td><td style="text-align:center;padding:8px 12px;">$279/mo</td><td style="text-align:center;padding:8px 12px;">$432/mo</td><td style="text-align:center;padding:8px 12px;">$408/mo</td><td style="text-align:center;padding:8px 12px;">$583/mo</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="color:var(--muted);font-size:0.8rem;margin-top:12px;">Rates shown are for non-smoker males in good health. Female rates are typically 30–50% higher on individual policies. To-age-65 benefit period adds roughly 35–50% to the premiums above. Adding an own-occupation rider (vs. any-occupation) adds 15–25%.</p>
+  </div>
+
+  <!-- Disability Causes and Statistics Table -->
+  <div style="background:white;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);padding:28px 32px;margin-bottom:32px;">
+    <h2 style="font-size:1.2rem;font-weight:800;color:var(--text);margin:0 0 6px;">Leading Causes of Long-Term Disability Claims (2026)</h2>
+    <p style="color:var(--muted);font-size:0.85rem;margin-bottom:18px;">The most common disabilities are not workplace accidents — they're illnesses and degenerative conditions that can strike any worker. Source: Council for Disability Awareness / Milliman Research 2025–2026.</p>
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+      <thead>
+        <tr style="background:#f0fdf8;">
+          <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border);">Cause of Disability</th>
+          <th style="text-align:center;padding:10px 12px;border-bottom:2px solid var(--border);">Share of Claims</th>
+          <th style="text-align:center;padding:10px 12px;border-bottom:2px solid var(--border);">Avg. Duration</th>
+          <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border);">Key Insight</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Musculoskeletal (back, joint)</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">~29%</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">2.8 years</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Most common; often affects physical and desk workers equally</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Mental Health &amp; Behavioral</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">~19%</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">3.4 years</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Rising rapidly; many policies cap at 24 months — check yours</td></tr>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Cancer</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">~15%</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">2.1 years</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Affects all ages; treatment side effects often prevent work</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Cardiovascular Disease</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">~9%</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">3.9 years</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Often leads to permanent or very long-duration disability</td></tr>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Injuries / Accidents</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">~9%</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">1.7 years</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Shortest average; workers' comp may cover work-related injuries</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;font-weight:600;">Nervous System / Neurological</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">~8%</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">4.6 years</td><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">MS, ALS, Parkinson's — often progressive and long-duration</td></tr>
+        <tr><td style="padding:8px 12px;font-weight:600;">Digestive / Other</td><td style="text-align:center;padding:8px 12px;">~11%</td><td style="text-align:center;padding:8px 12px;">1.9 years</td><td style="padding:8px 12px;">Crohn's, IBD, and other chronic conditions increasingly common</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="color:#374151;font-size:0.88rem;line-height:1.7;margin-top:14px;"><strong>The key takeaway:</strong> Over 70% of long-term disability claims are caused by illness — not accidents — meaning workers' compensation and accident-only policies leave most workers exposed. A comprehensive long-term disability policy is the only product designed to cover this full spectrum of risk.</p>
+  </div>
+
+  <!-- Disability Coverage Comparison: Group vs. Individual -->
+  <div style="background:white;border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);padding:28px 32px;margin-bottom:32px;">
+    <h2 style="font-size:1.2rem;font-weight:800;color:var(--text);margin:0 0 6px;">Group vs. Individual Disability Insurance: What's the Difference?</h2>
+    <p style="color:var(--muted);font-size:0.85rem;margin-bottom:18px;">Many workers assume employer group LTD coverage is sufficient. Here's how it actually compares to a personal individual policy.</p>
+    <div style="overflow-x:auto;">
+    <table style="width:100%;border-collapse:collapse;font-size:0.88rem;">
+      <thead>
+        <tr style="background:#f0fdf8;">
+          <th style="text-align:left;padding:10px 12px;border-bottom:2px solid var(--border);">Feature</th>
+          <th style="text-align:center;padding:10px 12px;border-bottom:2px solid var(--border);">Employer Group LTD</th>
+          <th style="text-align:center;padding:10px 12px;border-bottom:2px solid var(--border);">Individual LTD Policy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Typical Income Replacement</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">50–60% of base salary</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">60–80% of income</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Portability</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">❌ Lost when you leave job</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">✅ Follows you anywhere</td></tr>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Disability Definition</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">Any-occ after 24 months</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">Own-occ available for full term</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Taxability of Benefits</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">Taxable (employer pays premium)</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">Tax-free (you pay premium)</td></tr>
+        <tr><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Covers Bonuses / Commissions</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">Usually base salary only</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">Can include total comp</td></tr>
+        <tr style="background:#f9fafb;"><td style="padding:8px 12px;border-bottom:1px solid #f0f0f0;">Monthly Premium (typical)</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$0–$30 (employer subsidy)</td><td style="text-align:center;padding:8px 12px;border-bottom:1px solid #f0f0f0;">$80–$300+/month</td></tr>
+        <tr><td style="padding:8px 12px;">Renewal Guarantee</td><td style="text-align:center;padding:8px 12px;">Employer can change plan</td><td style="text-align:center;padding:8px 12px;">Non-cancelable available</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p style="color:#374151;font-size:0.88rem;line-height:1.7;margin-top:14px;">Most financial advisors recommend a personal individual LTD policy as the foundation, supplemented by group coverage where available. Because individual policies pay tax-free benefits and cover you regardless of your employer, they provide more reliable protection for the long-term disability scenarios that matter most.</p>
   </div>
 
   <!-- When to Talk to an Agent -->
