@@ -62,7 +62,9 @@
     .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.85); }
     .page-hero p { font-size: 1rem; opacity: 0.95; max-width: 520px; margin: 0 auto; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.8); }
     .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
-    .calc-panel { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
+    .calc-panel { background: #F0F9FF; border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
+    .chart-wrap { display: none; text-align: center; margin-top: 24px; }
+    .chart-wrap canvas { width: 280px !important; height: 280px !important; }
     .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
     .calc-panel .subtitle { color: var(--muted); font-size: 0.88rem; margin-bottom: 24px; }
     .form-group { margin-bottom: 18px; }
@@ -108,6 +110,8 @@
     #compare-result.show { display: block; }
     @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .compare-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <!-- FAQPage Schema (AEO) -->
   <script type="application/ld+json">
   {
@@ -197,7 +201,7 @@
 <div class="page-hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-  <h1>⚖️ Term vs. Whole Life Calculator</h1>
+  <h1><i data-lucide="shield" style="width:28px;height:28px;vertical-align:middle;margin-right:8px;color:#fff"></i> Term vs. Whole Life Calculator</h1>
   <p>See the real 20-year cost difference side by side - before an insurance agent shows you the whole life pitch.</p>
 </div>
 </div>
@@ -273,6 +277,9 @@
         </div>
       </div>
       <div class="verdict" id="tv-verdict"></div>
+      <div class="chart-wrap" id="tvl-chart-wrap">
+        <canvas id="tvlChart" width="280" height="280"></canvas>
+      </div>
     </div>
   </div>
 
@@ -458,6 +465,23 @@
     const verdict = `📊 Over 20 years, term life costs ${fmt(term20yr)} vs. ${fmt(whole20yr)} for whole life - a difference of ${fmt(savings20yr)}. If that ${fmt(monthlyDiff)}/month difference were invested in a low-cost index fund earning 7%/year, it would grow to approximately ${fmt(investedValue)} - compared to the whole life policy's estimated ${fmt(wholeCashValue)} in cash value. For most people, "buy term and invest the difference" builds significantly more wealth. Whole life may make sense for estate planning, business succession, or if you've maxed all other tax-advantaged accounts.`;
     document.getElementById('tv-verdict').textContent = verdict;
     document.getElementById('compare-result').classList.add('show');
+
+    // Live donut chart — term vs whole vs difference
+    const chartWrap = document.getElementById('tvl-chart-wrap');
+    chartWrap.style.display = 'block';
+    const ctx = document.getElementById('tvlChart').getContext('2d');
+    if (window._tvlChart) window._tvlChart.destroy();
+    window._tvlChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Term Cost (20yr)', 'Whole Life Cost (20yr)', 'Invested Difference Value'],
+        datasets: [{ data: [Math.round(term20yr), Math.round(whole20yr), Math.round(investedValue)], backgroundColor: ['#0EA5E9','#10B981','#F59E0B'], borderWidth: 2, borderColor: '#fff' }]
+      },
+      options: {
+        responsive: false, animation: { duration: 600 },
+        plugins: { legend: { position: 'bottom', labels: { font: { size: 12 }, padding: 12 } } }
+      }
+    });
   }
 
   function toggleFaq(btn) {
@@ -467,6 +491,7 @@
     document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
     if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
   }
+  lucide.createIcons();
 </script>
 </body>
 </html>

@@ -62,7 +62,7 @@
     .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.85); }
     .page-hero p { font-size: 1rem; opacity: 0.95; max-width: 520px; margin: 0 auto; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.8); }
     .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
-    .calc-panel { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
+    .calc-panel { background: #F0F9FF; border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
     .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
     .calc-panel .subtitle { color: var(--muted); font-size: 0.88rem; margin-bottom: 24px; }
     .inventory-box { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 18px; margin-bottom: 20px; }
@@ -78,9 +78,11 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
     .calc-btn:hover { background: var(--primary-dark); }
-    .result-box { background: linear-gradient(135deg, #f0fdf8, #fef9ec); border: 1px solid #a7f3d0; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid #0EA5E9; padding: 24px; margin-top: 24px; display: none; }
     .result-box.show { display: block; }
-    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .result-main { font-size: 52px; font-weight: 800; color: #0EA5E9; margin-bottom: 4px; line-height: 1.1; }
+    .chart-wrap { display: none; text-align: center; margin-top: 20px; }
+    .chart-wrap canvas { width: 280px !important; height: 280px !important; }
     .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
     .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
     .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
@@ -107,6 +109,8 @@
     footer a:hover { color: white; }
     @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } .inv-row { grid-template-columns: 1fr; } }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <!-- FAQPage Schema (AEO) -->
   <script type="application/ld+json">
   {
@@ -196,7 +200,7 @@
 <div class="page-hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-  <h1>🏢 Renters Insurance Calculator</h1>
+  <h1><i data-lucide="home" style="width:28px;height:28px;vertical-align:middle;margin-right:8px;color:#fff"></i> Renters Insurance Calculator</h1>
   <p>Your stuff is worth more than you think. Find out how much coverage you actually need — and what it costs.</p>
 </div>
 </div>
@@ -259,6 +263,7 @@
     </div>
     <button class="calc-btn" onclick="calcRenters()">Calculate My Renters Insurance Cost</button>
     <div id="renters-result" class="result-box">
+      <div style="font-size:14px;color:var(--muted);margin-bottom:4px;">Estimated Monthly Premium</div>
       <div class="result-main" id="ri-monthly"></div>
       <div class="result-label">Estimated Monthly Renters Insurance Premium</div>
       <div class="result-breakdown">
@@ -266,6 +271,9 @@
         <div class="result-item"><div class="label">Property Coverage</div><div class="value" id="ri-prop-out"></div></div>
         <div class="result-item"><div class="label">Liability Coverage</div><div class="value" id="ri-liab-out"></div></div>
         <div class="result-item"><div class="label">Deductible</div><div class="value" id="ri-ded-out"></div></div>
+      </div>
+      <div class="chart-wrap" id="renters-chart-wrap">
+        <canvas id="rentersChart" width="280" height="280"></canvas>
       </div>
       <p id="ri-note" style="margin-top:16px; font-size:0.88rem; color:#374151; line-height:1.6;"></p>
     </div>
@@ -434,6 +442,26 @@
     if (liability < 300000) note += ' Consider bumping liability to $300,000 — it adds little to the premium and protects you from costly claims.';
     document.getElementById('ri-note').textContent = note;
     document.getElementById('renters-result').classList.add('show');
+
+    // Live donut chart — coverage breakdown
+    const propPart = Math.round((property / 100) * 0.35 * dedAdj[deductible] * locFactor[location]);
+    const liabPart = liabAdd[liability] || 0;
+    const alePart = Math.round(propPart * 0.15);
+    const chartWrap = document.getElementById('renters-chart-wrap');
+    chartWrap.style.display = 'block';
+    const ctx = document.getElementById('rentersChart').getContext('2d');
+    if (window._rentersChart) window._rentersChart.destroy();
+    window._rentersChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Personal Property', 'Liability', 'Additional Living Expenses'],
+        datasets: [{ data: [propPart, liabPart, alePart], backgroundColor: ['#0EA5E9','#10B981','#F59E0B'], borderWidth: 2, borderColor: '#fff' }]
+      },
+      options: {
+        responsive: false, animation: { duration: 600 },
+        plugins: { legend: { position: 'bottom', labels: { font: { size: 12 }, padding: 12 } } }
+      }
+    });
   }
 
   function toggleFaq(btn) {
@@ -445,6 +473,7 @@
   }
 
   updateTotal();
+  lucide.createIcons();
 </script>
 </body>
 </html>

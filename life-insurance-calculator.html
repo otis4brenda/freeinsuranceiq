@@ -100,14 +100,19 @@
       cursor: pointer; margin-top: 8px; transition: background 0.2s;
     }
     .calc-btn:hover { background: var(--primary-dark); }
+    /* ── Result Hero ── */
     .result-box {
-      background: linear-gradient(135deg, #f0fdf8, #fef9ec);
-      border: 1px solid #a7f3d0; border-radius: var(--radius);
+      background: #ffffff;
+      border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-top: 4px solid #0EA5E9;
       padding: 24px; margin-top: 24px; display: none;
     }
     .result-box.show { display: block; }
-    .result-main { font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
-    .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
+    .result-main { font-size: 52px; font-weight: 800; color: #0EA5E9; margin-bottom: 4px; line-height: 1.1; }
+    .result-label { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
+    /* ── Chart ── */
+    .chart-wrap { display: none; text-align: center; margin-top: 20px; }
+    .chart-wrap canvas { width: 280px !important; height: 280px !important; }
     .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
     .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
     .result-item .label { font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
@@ -141,6 +146,9 @@
     footer a:hover { color: white; }
     @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
   </style>
+  <!-- Chart.js + Lucide Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <!-- FAQPage Schema (AEO) -->
   <script type="application/ld+json">
   {
@@ -232,7 +240,7 @@
 <div class="page-hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-  <h1>🛡️ Life Insurance Calculator</h1>
+  <h1><i data-lucide="shield" style="width:28px;height:28px;vertical-align:middle;margin-right:8px;color:#fff"></i> Life Insurance Calculator</h1>
   <p>How much life insurance do you actually need? Get your number in 60 seconds.</p>
 </div>
 </div>
@@ -278,13 +286,17 @@
     <button class="calc-btn" onclick="calcLife()">Calculate My Coverage Need</button>
 
     <div id="life-result" class="result-box">
+      <div style="font-size:14px;color:var(--muted);margin-bottom:4px;">Recommended Coverage</div>
       <div class="result-main" id="li-total"></div>
-      <div class="result-label">Recommended Life Insurance Coverage</div>
+      <div class="result-label">Total Life Insurance Coverage Needed</div>
       <div class="result-breakdown">
         <div class="result-item"><div class="label">Income Replacement</div><div class="value" id="li-inc-out"></div></div>
         <div class="result-item"><div class="label">Debt Payoff</div><div class="value" id="li-debt-out"></div></div>
         <div class="result-item"><div class="label">Final + Education</div><div class="value" id="li-other-out"></div></div>
         <div class="result-item"><div class="label">Less Existing Coverage</div><div class="value" id="li-existing-out"></div></div>
+      </div>
+      <div class="chart-wrap" id="life-chart-wrap">
+        <canvas id="lifeChart" width="280" height="280"></canvas>
       </div>
       <p id="li-advice" style="margin-top:16px; font-size:0.88rem; color:#374151; line-height:1.6;"></p>
     </div>
@@ -360,6 +372,7 @@
 
 <script>
   const fmt = n => '$' + Math.round(n).toLocaleString();
+  let lifeChartInst = null;
 
   function calcLife() {
     const income   = +document.getElementById('li-income').value || 0;
@@ -392,6 +405,23 @@
     }
     document.getElementById('li-advice').textContent = advice;
     document.getElementById('life-result').classList.add('show');
+
+    // Live donut chart
+    const chartWrap = document.getElementById('life-chart-wrap');
+    chartWrap.style.display = 'block';
+    const ctx = document.getElementById('lifeChart').getContext('2d');
+    if (lifeChartInst) lifeChartInst.destroy();
+    lifeChartInst = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Income Replacement', 'Debt Payoff', 'Final Expenses', 'Education Fund'],
+        datasets: [{ data: [incomeReplace, debt, final_, edu], backgroundColor: ['#0EA5E9','#10B981','#F59E0B','#8B5CF6'], borderWidth: 2, borderColor: '#fff' }]
+      },
+      options: {
+        responsive: false, animation: { duration: 600 },
+        plugins: { legend: { position: 'bottom', labels: { font: { size: 12 }, padding: 12 } } }
+      }
+    });
   }
 
   function toggleFaq(btn) {
@@ -401,6 +431,7 @@
     document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
     if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
   }
+  lucide.createIcons();
 </script>
 </body>
 </html>

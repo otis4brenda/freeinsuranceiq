@@ -62,7 +62,7 @@
     .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.85); }
     .page-hero p { font-size: 1rem; opacity: 0.95; max-width: 520px; margin: 0 auto; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.8); }
     .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
-    .calc-panel { background: var(--card); border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
+    .calc-panel { background: #F0F9FF; border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
     .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
     .calc-panel .subtitle { color: var(--muted); font-size: 0.88rem; margin-bottom: 24px; }
     .form-group { margin-bottom: 18px; }
@@ -72,9 +72,11 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
     .calc-btn:hover { background: var(--primary-dark); }
-    .result-box { background: linear-gradient(135deg, #f0fdf8, #fef9ec); border: 1px solid #a7f3d0; border-radius: var(--radius); padding: 24px; margin-top: 24px; display: none; }
+    .result-box { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid #0EA5E9; padding: 24px; margin-top: 24px; display: none; }
     .result-box.show { display: block; }
-    .result-main { font-size: 2rem; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .result-main { font-size: 52px; font-weight: 800; color: #0EA5E9; margin-bottom: 4px; line-height: 1.1; }
+    .chart-wrap { display: none; text-align: center; margin-top: 20px; }
+    .chart-wrap canvas { width: 280px !important; height: 280px !important; }
     .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
     .result-breakdown { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
     .result-item { background: white; border-radius: 8px; padding: 12px; border: 1px solid var(--border); }
@@ -101,6 +103,8 @@
     footer a:hover { color: white; }
     @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
   <!-- FAQPage Schema (AEO) -->
   <script type="application/ld+json">
   {
@@ -190,7 +194,7 @@
 <div class="page-hero">
   <div class="hero-bg"></div>
   <div class="hero-content">
-  <h1>🏠 Homeowners Insurance Calculator — How Much Does Home Insurance Cost?</h1>
+  <h1><i data-lucide="home" style="width:28px;height:28px;vertical-align:middle;margin-right:8px;color:#fff"></i> Homeowners Insurance Calculator — How Much Does Home Insurance Cost?</h1>
   <p>Estimate your homeowners insurance cost based on your home's real replacement value — not just the market price.</p>
 </div>
 </div>
@@ -239,13 +243,17 @@
     </div>
     <button class="calc-btn" onclick="calcHome()">Estimate My Premium</button>
     <div id="home-result" class="result-box">
+      <div style="font-size:14px;color:var(--muted);margin-bottom:4px;">Estimated Annual Premium</div>
       <div class="result-main" id="hi-annual"></div>
-      <div class="result-label">Estimated Annual Premium</div>
+      <div class="result-label">Estimated Annual Homeowners Insurance Premium</div>
       <div class="result-breakdown">
         <div class="result-item"><div class="label">Monthly Equivalent</div><div class="value" id="hi-monthly"></div></div>
         <div class="result-item"><div class="label">Dwelling Coverage</div><div class="value" id="hi-dwelling"></div></div>
         <div class="result-item"><div class="label">Rate per $1,000</div><div class="value" id="hi-rate"></div></div>
         <div class="result-item"><div class="label">Deductible</div><div class="value" id="hi-ded-out"></div></div>
+      </div>
+      <div class="chart-wrap" id="home-chart-wrap">
+        <canvas id="homeChart" width="280" height="280"></canvas>
       </div>
       <p id="hi-note" style="margin-top:16px; font-size:0.88rem; color:#374151; line-height:1.6;"></p>
     </div>
@@ -431,6 +439,26 @@
     };
     document.getElementById('hi-note').textContent = riskNotes[risk];
     document.getElementById('home-result').classList.add('show');
+
+    // Live donut chart — coverage breakdown
+    const propPremiumFinal = Math.round((+document.getElementById('hi-property').value || 0) / 1000 * 0.80);
+    const liabFinal = liabAdd;
+    const dwellingFinal = Math.round(dwellingPremium);
+    const chartWrap = document.getElementById('home-chart-wrap');
+    chartWrap.style.display = 'block';
+    const ctx = document.getElementById('homeChart').getContext('2d');
+    if (window._homeChart) window._homeChart.destroy();
+    window._homeChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['Dwelling', 'Personal Property', 'Liability', 'Additional Living'],
+        datasets: [{ data: [dwellingFinal, propPremiumFinal, liabFinal, Math.round(dwellingFinal * 0.20)], backgroundColor: ['#0EA5E9','#10B981','#F59E0B','#8B5CF6'], borderWidth: 2, borderColor: '#fff' }]
+      },
+      options: {
+        responsive: false, animation: { duration: 600 },
+        plugins: { legend: { position: 'bottom', labels: { font: { size: 12 }, padding: 12 } } }
+      }
+    });
   }
   function toggleFaq(btn) {
     const answer = btn.nextElementSibling;
@@ -439,6 +467,7 @@
     document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
     if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
   }
+  lucide.createIcons();
 </script>
 </body>
 </html>
