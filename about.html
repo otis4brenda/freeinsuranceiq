@@ -44,6 +44,14 @@
     .trust-list li { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.93rem; color: #374151; line-height: 1.5; }
     .trust-list li:last-child { border-bottom: none; }
     .trust-list li span:first-child { font-size: 1.3rem; flex-shrink: 0; }
+    .team-member{display:flex;align-items:flex-start;gap:16px;padding:16px 0;border-bottom:1px solid var(--border);}
+    .team-member:last-child{border-bottom:none;}
+    .team-avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary-dark));display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;}
+    .team-info h3{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:4px;}
+    .team-info p{font-size:0.88rem;color:var(--muted);margin:0;line-height:1.5;}
+    .calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin-top:16px;}
+    .calc-link{display:block;background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:14px 16px;text-decoration:none;color:var(--text);font-size:0.88rem;font-weight:600;transition:border-color 0.2s,background 0.2s;}
+    .calc-link:hover{border-color:var(--primary);background:#e8f5ee;}
     footer { background: var(--text); color: #9ca3af; text-align: center; padding: 28px 24px; font-size: 0.85rem; margin-top: 48px; }
     footer a { color: #9ca3af; text-decoration: none; }
     footer a:hover { color: white; }
@@ -64,13 +72,15 @@
 </nav>
 <div class="page-hero">
   <h1>About FreeInsuranceIQ</h1>
-  <p>We built the tool we wished existed when we were confused about insurance.</p>
+  <p>Independent insurance education tools — no sales pitch, no data collection, no affiliation with any insurer.</p>
 </div>
 <div class="container">
   <div class="content-card">
+    <p style="font-size:0.82rem;color:var(--muted);margin-bottom:16px;">Written by the <strong><a href="/about.html" style="color:var(--primary);">FreeInsuranceIQ Editorial Team</a></strong> &nbsp;&middot;&nbsp; Last updated: <strong>July 2026</strong></p>
     <h2>Why We Built This</h2>
-    <p>Insurance is one of the most important financial decisions most people make — and one of the least understood. The existing resources are either written in impenetrable jargon, buried inside lead-generation funnels that require your phone number, or produced by the same companies trying to sell you a policy.</p>
+    <p>Insurance is one of the most important financial decisions most people make — and one of the least understood. Whether you're shopping for life insurance to protect your family, trying to figure out how much auto coverage you actually need, or estimating your ACA subsidy before open enrollment, the information you need is typically buried inside lead-generation funnels designed to collect your phone number, not answer your question.</p>
     <p>FreeInsuranceIQ exists to change that. We built a set of plain-language calculators that give you real numbers based on your real situation — with no email required, no sales pitch, and no data sold to insurance companies. You use the tool, get your answer, and walk away informed.</p>
+    <p>Our calculators cover the eight most common insurance decisions Americans face: life, auto, home, health, renters, disability, long-term care, and term vs. whole life comparison. Each calculator was built from industry-standard actuarial methods, government data, and peer-reviewed insurance research — not marketing copy designed to upsell you.</p>
   </div>
   <div class="content-card">
     <h2>Our Principles</h2>
@@ -83,6 +93,48 @@
     </ul>
   </div>
   <div class="content-card">
+    <h2>Our Calculators</h2>
+    <p>FreeInsuranceIQ currently offers eight free insurance calculators:</p>
+    <div class="calc-grid">
+      <a class="calc-link" href="/life-insurance-calculator.html">🛡️ Life Insurance</a>
+      <a class="calc-link" href="/auto-insurance-calculator.html">🚗 Auto Insurance</a>
+      <a class="calc-link" href="/home-insurance-calculator.html">🏠 Home Insurance</a>
+      <a class="calc-link" href="/health-insurance-subsidy-calculator.html">🏥 Health Subsidy</a>
+      <a class="calc-link" href="/renters-insurance-calculator.html">🛏️ Renters Insurance</a>
+      <a class="calc-link" href="/disability-insurance-calculator.html">♿ Disability Insurance</a>
+      <a class="calc-link" href="/long-term-care-cost-calculator.html">🧑‍⚕️ Long-Term Care</a>
+      <a class="calc-link" href="/term-vs-whole-life-calculator.html">📊 Term vs Whole Life</a>
+    </div>
+    <p style="margin-top:16px;">Every calculator runs entirely in your browser. No data is transmitted, stored, or shared. Your insurance information stays yours.</p>
+  </div>
+
+  <div class="content-card">
+    <h2>Our Editorial Team</h2>
+    <p>FreeInsuranceIQ is produced by a team of insurance researchers and financial writers committed to consumer education and editorial independence.</p>
+    <div class="team-member">
+      <div class="team-avatar">📊</div>
+      <div class="team-info">
+        <h3>FreeInsuranceIQ Editorial Team</h3>
+        <p>Our team of insurance researchers and financial writers specializes in consumer insurance education. Each calculator is built using actuarial standards, NAIC benchmark data, government agency publications, and peer-reviewed industry research. Content is reviewed quarterly and updated whenever material regulatory or market changes occur.</p>
+      </div>
+    </div>
+    <div class="team-member">
+      <div class="team-avatar">✍️</div>
+      <div class="team-info">
+        <h3>Research &amp; Data Sources</h3>
+        <p>Our primary sources include the NAIC, LIMRA, Genworth Cost of Care Survey, CMS/Healthcare.gov, the Social Security Administration, the Insurance Information Institute, and J.D. Power insurance studies. Full source citations are listed in our <a href="/editorial-policy.html" style="color:var(--primary);">Editorial Policy</a>.</p>
+      </div>
+    </div>
+    <div class="team-member">
+      <div class="team-avatar">🔄</div>
+      <div class="team-info">
+        <h3>Independence Commitment</h3>
+        <p>We are not affiliated with any insurance carrier, broker, or comparison platform. We receive no referral fees or commissions. Our calculators give independent estimates — not quotes designed to convert you into a lead for a sales funnel.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-card">
     <h2>How We Make Money</h2>
     <p>FreeInsuranceIQ displays Google AdSense advertisements. These are standard display ads — not insurance leads, not affiliate links to specific carriers. The ads shown are based on your browser's ad settings and are managed entirely by Google. We do not share your personal information to serve ads.</p>
     <p>This advertising model lets us offer all calculators permanently free with no paywalls, no required email sign-ups, and no subscription fees. Ever.</p>
@@ -94,7 +146,8 @@
   </div>
 </div>
 <footer>
-  <p>© 2026 FreeInsuranceIQ · <a href="/">Home</a> · <a href="blog/">Blog</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms of Use</a> · <a href="contact.html">Contact</a></p>
+  <p>© 2026 FreeInsuranceIQ &nbsp;·&nbsp; <a href="/">Home</a> &nbsp;·&nbsp; <a href="/blog/">Blog</a> &nbsp;·&nbsp; <a href="/about.html">About</a> &nbsp;·&nbsp; <a href="/editorial-policy.html">Editorial Policy</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="/terms.html">Terms of Use</a> &nbsp;·&nbsp; <a href="/contact.html">Contact</a></p>
+  <p style="margin-top:8px;">Results are estimates only. Not insurance advice. Consult a licensed insurance professional.</p>
 </footer>
 </body>
 </html>
