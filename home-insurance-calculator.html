@@ -62,7 +62,7 @@
     .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.85); }
     .page-hero p { font-size: 1rem; opacity: 0.95; max-width: 520px; margin: 0 auto; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.8); }
     .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
-    .calc-panel { background: #F0F9FF; border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
+    .calc-panel { background: #f0fdf9; border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
     .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
     .calc-panel .subtitle { color: var(--muted); font-size: 0.88rem; margin-bottom: 24px; }
     .form-group { margin-bottom: 18px; }
@@ -72,9 +72,9 @@
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .calc-btn { width: 100%; background: var(--primary); color: white; border: none; border-radius: 10px; padding: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; margin-top: 8px; transition: background 0.2s; }
     .calc-btn:hover { background: var(--primary-dark); }
-    .result-box { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid #0EA5E9; padding: 24px; margin-top: 24px; display: none; }
+    .result-box { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-top: 4px solid #0f9e6e; padding: 24px; margin-top: 24px; display: none; }
     .result-box.show { display: block; }
-    .result-main { font-size: 52px; font-weight: 800; color: #0EA5E9; margin-bottom: 4px; line-height: 1.1; }
+    .result-main { font-size: 52px; font-weight: 800; color: #0f9e6e; margin-bottom: 4px; line-height: 1.1; }
     .chart-wrap { display: none; text-align: center; margin-top: 20px; }
     .chart-wrap canvas { width: 280px !important; height: 280px !important; }
     .result-label { font-size: 0.9rem; color: var(--muted); margin-bottom: 16px; }
@@ -452,7 +452,7 @@
       type: 'doughnut',
       data: {
         labels: ['Dwelling', 'Personal Property', 'Liability', 'Additional Living'],
-        datasets: [{ data: [dwellingFinal, propPremiumFinal, liabFinal, Math.round(dwellingFinal * 0.20)], backgroundColor: ['#0EA5E9','#10B981','#F59E0B','#8B5CF6'], borderWidth: 2, borderColor: '#fff' }]
+        datasets: [{ data: [dwellingFinal, propPremiumFinal, liabFinal, Math.round(dwellingFinal * 0.20)], backgroundColor: ['#0f9e6e','#10B981','#F59E0B','#8B5CF6'], borderWidth: 2, borderColor: '#fff' }]
       },
       options: {
         responsive: false, animation: { duration: 600 },

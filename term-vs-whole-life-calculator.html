@@ -62,7 +62,7 @@
     .page-hero h1 { font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; margin-bottom: 10px; color: #ffffff; text-shadow: 0 2px 8px rgba(0,0,0,0.85); }
     .page-hero p { font-size: 1rem; opacity: 0.95; max-width: 520px; margin: 0 auto; color: #ffffff; text-shadow: 0 1px 6px rgba(0,0,0,0.8); }
     .container { max-width: 800px; margin: 0 auto; padding: 32px 20px; }
-    .calc-panel { background: #F0F9FF; border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
+    .calc-panel { background: #f0fdf9; border-radius: var(--radius); box-shadow: var(--shadow); padding: 32px; margin-bottom: 28px; border: 1px solid var(--border); }
     .chart-wrap { display: none; text-align: center; margin-top: 24px; }
     .chart-wrap canvas { width: 280px !important; height: 280px !important; }
     .calc-panel h2 { font-size: 1.3rem; font-weight: 700; margin-bottom: 6px; }
@@ -475,7 +475,7 @@
       type: 'doughnut',
       data: {
         labels: ['Term Cost (20yr)', 'Whole Life Cost (20yr)', 'Invested Difference Value'],
-        datasets: [{ data: [Math.round(term20yr), Math.round(whole20yr), Math.round(investedValue)], backgroundColor: ['#0EA5E9','#10B981','#F59E0B'], borderWidth: 2, borderColor: '#fff' }]
+        datasets: [{ data: [Math.round(term20yr), Math.round(whole20yr), Math.round(investedValue)], backgroundColor: ['#0f9e6e','#10B981','#F59E0B'], borderWidth: 2, borderColor: '#fff' }]
       },
       options: {
         responsive: false, animation: { duration: 600 },
