@@ -489,6 +489,20 @@
   </div>
 </div>
 
+<!-- National Average Scenario Box -->
+<div id="national-average-scenario" style="background:#f0fdf4;border:1px solid #86efac;border-left:4px solid #16a34a;border-radius:8px;padding:18px 22px;max-width:700px;margin:0 auto 28px;">
+  <strong style="color:#15803d;font-size:0.95rem;">📊 National Average Scenario — August 2026</strong>
+  <p style="margin:10px 0 6px;font-size:0.9rem;color:#166534;">A <strong>35-year-old non-smoking male</strong> earning $75,000/year, with a $300,000 mortgage and two kids, needs approximately:</p>
+  <ul style="margin:0;padding-left:20px;font-size:0.9rem;color:#166534;line-height:1.8;">
+    <li><strong>$900,000–$1,200,000</strong> in coverage using the 10× income + DIME method</li>
+    <li>A <strong>20-year term policy</strong> at that coverage level costs roughly <strong>$45–$65/month</strong></li>
+    <li>A <strong>30-year term</strong> costs ~$70–$100/month</li>
+    <li>Waiting until age 45 increases premiums by <strong>50–100%</strong> for the same coverage</li>
+    <li>106 million American adults are uninsured or underinsured (LIMRA 2024)</li>
+  </ul>
+  <p style="margin:10px 0 0;font-size:0.82rem;color:#4d7c5e;">Sources: LIMRA 2024 Life Insurance Barometer, ACLI Life Insurers Fact Book, NAIC.</p>
+</div>
+
 <!-- E-E-A-T Attribution -->
 <div style="background:#f0faf6;border-top:1px solid #d1e8df;padding:20px 24px;text-align:center;font-size:0.83rem;color:#6b7280;">
   <p>Written by the <strong><a href="/about.html" style="color:#0f9e6e;text-decoration:none;">FreeInsuranceIQ Editorial Team</a></strong> &nbsp;&middot;&nbsp; Last updated: <strong>August 2026</strong></p>
@@ -563,5 +577,32 @@
   }
   lucide.createIcons();
 </script>
+
+<script>
+  (function() {
+    if (new URLSearchParams(window.location.search).get('embed') === '1') {
+      document.documentElement.classList.add('embed-mode');
+      const style = document.createElement('style');
+      style.textContent = '.embed-mode nav, .embed-mode footer, .embed-mode .related-calcs, .embed-mode .faq-section, .embed-mode .content-section, .embed-mode .adsbygoogle { display:none !important; } .embed-mode body { background:#fff; padding:0; margin:0; } .embed-mode .embed-attribution { display:block !important; }';
+      document.head.appendChild(style);
+    }
+  })();
+</script>
+
+<div class="embed-attribution" style="display:none;text-align:center;padding:8px;font-size:12px;color:#666;border-top:1px solid #e5e7eb;">
+  Free calculator by <a href="https://freeinsuranceiq.com/life-insurance-calculator.html" style="color:#0f9e6e;">FreeInsuranceIQ</a> — no login required
+</div>
+
+<!-- Embed Snippet:
+<iframe
+  src="https://freeinsuranceiq.com/life-insurance-calculator.html?embed=1"
+  width="100%" height="580" frameborder="0"
+  title="Free Life Insurance Calculator"
+  loading="lazy">
+</iframe>
+<p style="font-size:13px;color:#666;">
+  Free calculator by <a href="https://freeinsuranceiq.com/life-insurance-calculator.html" rel="nofollow">FreeInsuranceIQ</a>
+</p>
+-->
 </body>
 </html>
