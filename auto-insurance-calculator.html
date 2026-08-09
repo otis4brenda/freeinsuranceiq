@@ -29,7 +29,8 @@
     "name": "Auto Insurance Calculator", "url": "https://freeinsuranceiq.com/auto-insurance-calculator.html",
     "description": "Estimate monthly car insurance costs based on driver age, record, vehicle value, and coverage level.",
     "applicationCategory": "FinanceApplication", "operatingSystem": "Any",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "dateModified": "2026-08-09", "datePublished": "2026-06-01"
   }
   </script>
   <style>
@@ -548,6 +549,20 @@
   </div>
 </div>
 
+<!-- National Average Scenario Box -->
+<div id="national-average-scenario" style="background:#f0fdf4;border:1px solid #86efac;border-left:4px solid #16a34a;border-radius:8px;padding:18px 22px;max-width:700px;margin:0 auto 28px;">
+  <strong style="color:#15803d;font-size:0.95rem;">📊 National Average Scenario — August 2026</strong>
+  <p style="margin:10px 0 6px;font-size:0.9rem;color:#166534;">A <strong>35-year-old with a clean record</strong> driving a <strong>2021 mid-size sedan</strong> (value ~$22,000) 12,000 miles/year with full coverage pays:</p>
+  <ul style="margin:0;padding-left:20px;font-size:0.9rem;color:#166534;line-height:1.8;">
+    <li>National average: <strong>$186/month ($2,237/year)</strong></li>
+    <li>Lowest-cost state (Maine): ~$95/month</li>
+    <li>Highest-cost state (Florida): ~$310/month</li>
+    <li>Adding a 19-year-old to the policy: +$175–$275/month on average</li>
+    <li>One at-fault accident: premiums jump <strong>42% on average</strong></li>
+  </ul>
+  <p style="margin:10px 0 0;font-size:0.82rem;color:#4d7c5e;">Sources: NAIC Auto Insurance Report (2025 data), Insurance Information Institute 2026 State Rankings.</p>
+</div>
+
 <!-- E-E-A-T Attribution -->
 <div style="background:#f0faf6;border-top:1px solid #d1e8df;padding:20px 24px;text-align:center;font-size:0.83rem;color:#6b7280;">
   <p>Written by the <strong><a href="/about.html" style="color:#0f9e6e;text-decoration:none;">FreeInsuranceIQ Editorial Team</a></strong> &nbsp;&middot;&nbsp; Last updated: <strong>August 2026</strong></p>
@@ -653,5 +668,32 @@
   }
   lucide.createIcons();
 </script>
+
+<script>
+  (function() {
+    if (new URLSearchParams(window.location.search).get('embed') === '1') {
+      document.documentElement.classList.add('embed-mode');
+      const style = document.createElement('style');
+      style.textContent = '.embed-mode nav, .embed-mode footer, .embed-mode .related-calcs, .embed-mode .faq-section, .embed-mode .content-section, .embed-mode .adsbygoogle { display:none !important; } .embed-mode body { background:#fff; padding:0; margin:0; } .embed-mode .embed-attribution { display:block !important; }';
+      document.head.appendChild(style);
+    }
+  })();
+</script>
+
+<div class="embed-attribution" style="display:none;text-align:center;padding:8px;font-size:12px;color:#666;border-top:1px solid #e5e7eb;">
+  Free calculator by <a href="https://freeinsuranceiq.com/auto-insurance-calculator.html" style="color:#0f9e6e;">FreeInsuranceIQ</a> — no login required
+</div>
+
+<!-- Embed Snippet:
+<iframe
+  src="https://freeinsuranceiq.com/auto-insurance-calculator.html?embed=1"
+  width="100%" height="580" frameborder="0"
+  title="Free Auto Insurance Calculator"
+  loading="lazy">
+</iframe>
+<p style="font-size:13px;color:#666;">
+  Free calculator by <a href="https://freeinsuranceiq.com/auto-insurance-calculator.html" rel="nofollow">FreeInsuranceIQ</a>
+</p>
+-->
 </body>
 </html>
