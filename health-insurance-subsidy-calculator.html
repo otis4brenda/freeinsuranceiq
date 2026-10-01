@@ -200,9 +200,13 @@
 </div>
 <div class="container">
   <a class="back-link" href="/">← All Calculators</a>
+  <div style="background:#fff3cd;border:1px solid #f59e0b;border-radius:10px;padding:14px 18px;margin-bottom:20px;">
+    <strong style="color:#92400e;">📅 Open Enrollment starts November 1, 2026</strong> — Plans purchased by December 15 take effect January 1. <a href="https://www.healthcare.gov" rel="noopener" style="color:#92400e;">Enroll at healthcare.gov →</a>
+    <br><small style="color:#92400e;">⚠️ 2026 update: Enhanced ARP subsidies expired. Only incomes 100%–400% FPL qualify for federal tax credits this year.</small>
+  </div>
   <div class="calc-panel">
     <h2>ACA Marketplace Subsidy Estimator</h2>
-    <p class="subtitle">Based on 2026 Federal Poverty Level guidelines. Your result is an estimate — healthcare.gov has exact figures for your area and exact plan prices. · Updated September 2026</p>
+    <p class="subtitle">Based on 2026 Federal Poverty Level guidelines. Your result is an estimate — healthcare.gov has exact figures for your area and exact plan prices. · Updated October 2026</p>
     <div class="form-row">
       <div class="form-group">
         <label>Household Size</label>
@@ -568,7 +572,7 @@
     <p style="color:#6b7280;font-size:0.82rem;margin:0 0 32px;">SEP window begins on the date of the qualifying event. Enroll by day 60 for uninterrupted coverage. Source: healthcare.gov 2026.</p>
 
     <h2 style="font-size:1.2rem;font-weight:800;color:var(--text);margin:0 0 6px;">2026 ACA Subsidy Eligibility — Income Limits by Household Size</h2>
-    <p style="font-size:0.85rem;color:#6b7280;margin:0 0 14px;">You qualify for premium tax credits if your income falls between 100% and 400% of the Federal Poverty Level (FPL). Under ARP extension, subsidies are also available above 400% FPL if the benchmark premium exceeds 8.5% of income.</p>
+    <p style="font-size:0.85rem;color:#6b7280;margin:0 0 14px;">You qualify for premium tax credits if your income falls between 100% and 400% of the Federal Poverty Level (FPL). Enhanced subsidies that previously extended eligibility above 400% FPL expired January 1, 2026. The subsidy cliff is back for 2026 coverage.</p>
     <div style="overflow-x:auto;margin-bottom:6px;">
       <table style="width:100%;border-collapse:collapse;font-size:0.87rem;">
         <thead>
@@ -625,16 +629,16 @@
 <script>
   // 2026 FPL baselines (48 contiguous states)
   const FPL_BASE = { 1:15650, 2:21150, 3:26650, 4:32150, 5:37650, 6:43150, 7:48650, 8:54150 };
-  // Required contribution % by FPL band (2026 ARP-enhanced)
+  // Required contribution % by FPL band (2026 — ARP enhanced subsidies expired Jan 1, 2026)
   function getContribPct(fplPct) {
     if (fplPct <= 1.0) return 0;
     if (fplPct <= 1.33) return 0;
-    if (fplPct <= 1.5)  return 0.00;
-    if (fplPct <= 2.0)  return 0.02;
-    if (fplPct <= 2.5)  return 0.04;
-    if (fplPct <= 3.0)  return 0.06;
-    if (fplPct <= 4.0)  return 0.085;
-    return 0.085; // Extended enhanced subsidies
+    if (fplPct <= 1.5)  return 0.021;
+    if (fplPct <= 2.0)  return 0.06;
+    if (fplPct <= 2.5)  return 0.08;
+    if (fplPct <= 3.0)  return 0.09;
+    if (fplPct <= 4.0)  return 0.0996;
+    return null; // Above 400% FPL = no subsidy in 2026
   }
   // Benchmark Silver premium estimate by age (national avg 2026)
   function getBenchmarkPremium(age) {
@@ -672,10 +676,9 @@
       subsidy = 0;
       netPremium = fullPremium;
     } else if (fplPct > 4.0) {
-      // Enhanced ARP subsidies still cap at 8.5% of income above 400% FPL
-      const maxContrib400 = (income * 0.085) / 12;
-      subsidy = Math.max(0, fullPremium - maxContrib400);
-      netPremium = Math.max(0, fullPremium - subsidy);
+      // Above 400% FPL = no federal subsidy in 2026 (ARP enhanced subsidies expired)
+      subsidy = 0;
+      netPremium = fullPremium;
     } else {
       subsidy = Math.max(0, fullPremium - maxContrib);
       netPremium = Math.max(0, fullPremium - subsidy);
@@ -697,7 +700,7 @@
     } else if (fplPct <= 4.0) {
       note = '💡 You qualify for ACA premium tax credits. Shop multiple plans — the subsidy applies regardless of which metal tier you choose.';
     } else {
-      note = '💡 Above 400% FPL, enhanced subsidies may still help if benchmark premiums in your area are high. Visit healthcare.gov to see actual plan options and costs for your ZIP code.';
+      note = '⚠️ Above 400% FPL — no federal subsidy available in 2026. Enhanced ARP subsidies expired January 1, 2026. Visit healthcare.gov to see unsubsidized plan options, or check if your state offers its own supplement.';
     }
     document.getElementById('hs-note').textContent = note;
     document.getElementById('health-result').classList.add('show');
