@@ -31,12 +31,6 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root { --primary: #0f9e6e; --primary-dark: #0b7a55; --accent: #f59e0b; --bg: #f3f9f7; --card: #ffffff; --text: #1a2e25; --muted: #6b7280; --border: #d1e8df; --radius: 12px; --shadow: 0 2px 16px rgba(15,158,110,0.08); }
     body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); }
-    nav { background: var(--card); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 8px rgba(0,0,0,0.06); }
-    .nav-logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); text-decoration: none; }
-    .nav-logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 20px; }
-    .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.85rem; font-weight: 500; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--primary); }
     .page-hero {
       position: relative;
       overflow: hidden;
@@ -102,7 +96,24 @@
     footer { background: var(--text); color: #9ca3af; text-align: center; padding: 28px 24px; font-size: 0.85rem; margin-top: 48px; }
     footer a { color: #9ca3af; text-decoration: none; }
     footer a:hover { color: white; }
-    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } .nav-links { display: none; } }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .result-breakdown { grid-template-columns: 1fr; } }
+      nav {
+      background: var(--primary);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding: 8px 24px 4px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; } .nav-logo img { display:block; height:48px; width:auto; max-width:320px; }
+    .nav-links { display: flex; gap: 16px; flex-wrap: nowrap; overflow-x: auto; margin-top: 3px; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; } .nav-links::-webkit-scrollbar { display: none; } .nav-links a { white-space: nowrap; flex-shrink: 0; }
+    .nav-links a { text-decoration: none; color: rgba(255,255,255,0.75); font-size: 0.8rem; font-weight: 500; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--accent); }
   </style>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -179,17 +190,19 @@
 </head>
 <body>
 <nav>
-  <a class="nav-logo" href="/">FreeInsurance<span>IQ</span></a>
+  <a class="nav-logo" href="/"><img src="/images/logo.png" alt="FreeInsuranceIQ" style="height:48px;width:auto;display:block;"></a>
   <div class="nav-links">
-    <a href="life-insurance-calculator.html">Life</a>
-    <a href="auto-insurance-calculator.html">Auto</a>
-    <a href="home-insurance-calculator.html">Home</a>
-    <a href="health-insurance-subsidy-calculator.html">Health</a>
-    <a href="renters-insurance-calculator.html">Renters</a>
-    <a href="disability-insurance-calculator.html">Disability</a>
-    <a href="long-term-care-cost-calculator.html">LTC</a>
-    <a href="blog/">Blog</a>
-    <a href="about.html">About</a>
+    <a href="/life-insurance-calculator.html">Life</a>
+    <a href="/auto-insurance-calculator.html">Auto</a>
+    <a href="/home-insurance-calculator.html">Home</a>
+    <a href="/health-insurance-subsidy-calculator.html">Health</a>
+    <a href="/renters-insurance-calculator.html">Renters</a>
+    <a href="/disability-insurance-calculator.html">Disability</a>
+    <a href="/long-term-care-cost-calculator.html">Long-Term Care</a>
+    <a href="/why-car-insurance-is-so-expensive.html">Why So Expensive?</a>
+    <a href="/car-insurance-rates-by-state.html">Rates by State</a>
+    <a href="/blog/">Blog</a>
+    <a href="/about.html">About</a>
   </div>
 </nav>
 <div class="page-hero">
