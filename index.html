@@ -127,13 +127,7 @@
       z-index: 100;
       box-shadow: 0 1px 8px rgba(0,0,0,0.06);
     }
-    .nav-logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--primary);
-      text-decoration: none;
-    }
-    .nav-logo span { color: var(--accent); }
+    .nav-logo { display:flex; align-items:center; text-decoration:none; }
     .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
     .nav-links a {
       text-decoration: none;
@@ -285,7 +279,7 @@
 <body>
 
 <nav>
-  <a class="nav-logo" href="/">FreeInsurance<span>IQ</span></a>
+  <a class="nav-logo" href="/"><img src="images/logo.png" alt="FreeInsuranceIQ" style="height:40px;width:auto;vertical-align:middle;"></a>
   <div class="nav-links">
     <a href="life-insurance-calculator.html">Life</a>
     <a href="auto-insurance-calculator.html">Auto</a>
