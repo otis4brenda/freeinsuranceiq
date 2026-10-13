@@ -128,7 +128,7 @@
       box-shadow: 0 2px 12px rgba(0,0,0,0.18);
     }
     .nav-logo { display:flex; align-items:center; text-decoration:none; } .nav-logo img { display:block; height:44px; width:auto; }
-    .nav-links { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 6px; }
+    .nav-links { display: flex; gap: 16px; flex-wrap: nowrap; overflow-x: auto; margin-top: 6px; white-space: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; } .nav-links::-webkit-scrollbar { display: none; }
     .nav-links a {
       text-decoration: none;
       color: rgba(255,255,255,0.75);
