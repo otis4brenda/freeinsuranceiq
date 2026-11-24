@@ -18,3 +18,4 @@ User-agent: Bingbot
 Allow: /
 
 Sitemap: https://freeinsuranceiq.com/sitemap.xml
+# Updated 2026-11-24
